@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Estrutura base de um site com as Grouping Tags </title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif; /* Define a fonte do texto para Arial, Helvetica ou uma fonte genérica sans-serif */
+            background-color: dimgray; /* Define a cor de fundo do corpo da página como cinza escuro */
+            margin: 0; /* Remove as margens padrão do corpo da página */
+        }
+    
+        header {
+            background-color: white; /* Define a cor de fundo do cabeçalho como branco */
+            padding: 10px; /* Adiciona um espaçamento interno de 10px em todas as direções */
+            margin: 10px; /* Adiciona uma margem externa de 10px em todas as direções */
+        }
+    
+        nav {
+            background-color: rgb(102, 102, 102); /* Define a cor de fundo da barra de navegação como cinza médio */
+            padding: 3px; /* Adiciona um espaçamento interno de 3px em todas as direções */
+        }
+    
+        nav > a {
+            text-decoration: none; /* Remove o sublinhado dos links */
+            color: white; /* Define a cor do texto dos links como branco */
+            font-weight: bold; /* Define o peso da fonte como negrito */
+            margin-right: 30px; /* Adiciona um espaçamento de 30px à direita de cada link */
+            display: inline-block; /* Faz com que os links se comportem como blocos inline para melhor controle de espaçamento */
+        }
+    
+        nav > a:hover {
+            text-decoration: underline; /* Adiciona um sublinhado quando o mouse passa sobre o link */
+        }
+    
+        main {
+            background-color: white; /* Define a cor de fundo do conteúdo principal como branco */
+            padding: 10px; /* Adiciona um espaçamento interno de 10px em todas as direções */
+            margin: 10px; /* Adiciona uma margem externa de 10px em todas as direções */
+        }
+    
+        footer {
+            background-color: black; /* Define a cor de fundo do rodapé como preto */
+            color: white; /* Define a cor do texto do rodapé como branco */
+            text-align: center; /* Centraliza o texto dentro do rodapé */
+            padding: 5px; /* Adiciona um espaçamento interno de 5px em todas as direções */
+            margin: 8px; /* Adiciona uma margem externa de 8px em todas as direções */
+        }
+    </style>
+    
+    
+        
+</head>
+
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        </nav>
+    </header>
+<main>   
+    <section id="assuntos">
+        </section>
+
+        <section id="noticias">
+        <article>
+        <h2>Notícia sobre o Brasil</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Fugit, minima sequi sapiente, id nobis deleniti
+        eligendi quaerat facilis animi eius vitae deserunt
+        accusamus temporibus. Similique nunquan fugiat a ea
+        venian.</p>
+        <aside>
+        <p>Artigo escrito por José da Silva</p>
+        </aside>
+        </article>
+
+        <article>
+        </article>
+
+        </section>
+</main>
+<footer>
+    <p>Desenvolvido ór Willis Ramos</p>
+</footer>
+
+</body>
+</html>
+<!--As principais tags semânticas em HTML5 incluem:
+
+1. **<header>**: Define o cabeçalho de um documento ou seção.
+2. **<nav>**: Usada para seções de navegação.
+3. **<main>**: Representa o conteúdo principal do documento.
+4. **<section>**: Define seções temáticas dentro de um documento.
+5. **<article>**: Usada para conteúdo independente, como postagens de blog e artigos.
+6. **<aside>**: Contém informações relacionadas, mas não essenciais, ao conteúdo principal.
+7. **<footer>**: Define o rodapé de um documento ou seção.
+8. **<figure>**: Usada para encapsular conteúdo ilustrativo como imagens, gráficos e legendas.
+9. **<figcaption>**: Fornece uma legenda para um elemento <figure>.
+
+Essas tags ajudam a estruturar o conteúdo de forma mais clara e acessível, tanto para desenvolvedores quanto para leitores e mecanismos de busca.!-->

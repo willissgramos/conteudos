@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimidia</title>
+    <style>
+        body { font-family: Arial, sans-serif; font-size: 16px; color: #333; line-height: 1.5; margin: 0; padding: 0; }
+        p { margin-bottom: 16px; text-align: justify; }
+        h1 { text-align: center; color: #555; }
+      </style>
+</head>
+<body>
+    
+<h1>Elemento de Áudio</h1>
+<p>O elemento <b>audio </b> do HTML5 facilita a incorporação de conteúdo de áudio em nossas páginas da web sem precisar de qualquer plug-in externo</p>
+
+<audio src="Hurt.mp3" controls >
+  Seu navegador não suporta o elemento de áudio.
+</audio>
+
+<br>No exemplo acima, o atributo controls é usado para exibir os controles de áudio padrão. Isso inclui botões para play/pause, volume e seekbar.
+
+Aqui estão alguns dos principais atributos que você pode usar com o elemento <b>audio</b>:
+
+<br><b>src:</b>Especifica a URL do arquivo de áudio.</br>
+<br><b>controls:</b> Adiciona controles de áudio, como play, pause e volume.</br>
+<br><b>autoplay:</b> Começa a reproduzir o áudio assim que estiver pronto.</br>
+<br><b>loop:</b> Faz o áudio começar de novo, sempre que termina.</br>
+<br><b>muted:</b> Define o áudio para ser reproduzido silenciosamente.</br>
+<br><b>Source:src:</b>Dentro da tag video ou audio é importante criar o atributo <source src="arquivo" type="audio/mp4"> e colocar o arquivo em varios formatos para rodar em todos os usuarios e navegadores
+
+<h1>Elemento de Vídeo</h1>
+<p>Da mesma forma que o áudio, o elemento <b>video </b>facilita a incorporação de conteúdo de vídeo em nossas páginas web. a maniera local pode geral muito custo de trego de dados para o cliente</p>
+
+<video src="video.mp4" controls poster="Kratos.jpg">
+  Seu navegador não suporta o elemento de vídeo.
+</video>
+
+<br>Novamente, estamos usando o atributo controls para exibir os controles de vídeo padrão.
+
+Os atributos que você pode usar com o elemento <b>video</b> são muito semelhantes aos do elemento <b>audio</b>:
+
+<br><b>src:</b> Especifica a URL do arquivo de vídeo.</br>
+<br><b>controls:</b> Adiciona controles de vídeo, como play, pause, volume e seekbar.</br>
+<br><b>autoplay:</b> Começa a reproduzir o vídeo assim que estiver pronto.</br>
+<br><b>loop:</b> Faz o vídeo começar de novo, sempre que termina.</br>
+<br><b>muted:</b> Define o vídeo para ser reproduzido silenciosamente.</br>
+<br><b>poster:</b> Especifica uma imagem a ser exibida enquanto o vídeo está carregando, ou até que o usuário aperte o play.</br>
+<br><b>width e height: </b>Definem a largura e a altura do player de vídeo na página.</br>
+<br><b>Source:src:</b>Dentro da tag video ou audio é importante criar o atributo <source src="arquivo" type="video/mp4"> e colocar o arquivo em varios formatos para rodar em todos os usuarios e navegadores
+
+<h1>Incorporação de conteúdo do YouTube </h1>
+<p>Incorporar um vídeo do YouTube em sua página HTML é bastante simples. Primeiro, você precisa encontrar o vídeo que deseja incorporar no YouTube. 
+Abaixo do vídeo, você verá um botão de compartilhar. Ao clicar neste botão, você verá uma opção chamada ‘Incorporar’. Clicar nesta opção irá gerar 
+um snippet de código que você pode copiar e colar diretamente em seu código HTML.</p>
+
+<iframe width="560" height="315" 
+src="https://www.youtube.com/embed/V1C4U2gN6Oo?si=eewJyBSfPeTZRvur" 
+title="YouTube video player" 
+frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+referrerpolicy="strict-origin-when-cross-origin" 
+allowfullscreen>
+</iframe>
+
+<br> Vamos analisar o que está acontecendo aqui:
+<br>
+<b><br>iframe:</b> O elemento iframe é usado para incorporar outro documento HTML dentro de um documento HTML atual. Neste caso, estamos usando-o para incorporar o vídeo do YouTube.</br>
+<b><br>width e height:</b> Estes atributos definem a largura e a altura do iframe.</br>
+<b><br>src:</b> Este atributo aponta para a URL do vídeo do YouTube que desejamos incorporar.</br>
+<b><br>frameborder:</b> Este atributo era usado para especificar se os iframes deveriam ter bordas ou não. No entanto, não é suportado em HTML5 e não deve ser usado.</br>
+<b><br>allow: </b>Este atributo é específico do YouTube e permite vários recursos, como reprodução automática, gravação de clipboard, mídia criptografada, giroscópio e picture-in-picture.</br>
+<b><br>allowfullscreen:</b> Este atributo permite que o vídeo seja visualizado em tela cheia.</br>
+
+
+<h1>Como funciona um Iframe? </h1>
+<p>Um <b>iframe</b> é um elemento do HTML que nos permite incorporar outro documento HTML dentro do nosso documento atual. Isso é algo como uma janela para outra página web. Por exemplo, quando incorporamos um vídeo do YouTube em nossa página, estamos na verdade inserindo uma pequena página web que contém o reprodutor de vídeo do YouTube em nosso próprio site.</p>
+
+Aqui está um exemplo de como usar um <b>iframe:(Aula 4 Imagens) </b>
+
+  <iframe src="..//HTML/4 Imagens.html" width="600" height="400"></iframe>
+  
+ <br> <b><h3>Vantagens do uso de Iframes</h3></b>
+  
+ </br><b>Conteúdo externo: </b>Permite a incorporação fácil de conteúdo de outras páginas da web, como vídeos do YouTube, mapas do Google, etc.
+ <br> </br><b>Independência: </b>O conteúdo dentro de um iframe é independente do resto da página. Assim, se algo der errado dentro do iframe, isso não afetará o restante da página.
+ <br> </br><b>Atualização parcial da página: </b>Como o conteúdo de um iframe é carregado independentemente, ele pode ser usado para atualizar parte da página sem recarregar todo o site.
+ 
+ <b><h3>Desvantagens do uso de Iframes</h3></b>
+
+ <b>SEO: </b>Mecanismos de busca têm dificuldade em indexar o conteúdo dentro de iframes. Portanto, o uso excessivo de iframes pode impactar negativamente a visibilidade do seu site nos motores de busca.
+ <br></br><b>Compatibilidade: </b>Alguns navegadores mais antigos ou com configurações de segurança rigorosas podem não suportar iframes ou podem bloquear seu conteúdo.
+ <br></br><b>Desempenho:</b> Incorporar muitos iframes pode tornar a página mais lenta, pois cada iframe adiciona uma solicitação HTTP adicional.
+
+
+</body>
+</html>

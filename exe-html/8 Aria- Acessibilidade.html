@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARIA</title>
+    <style>
+        body { font-family: Arial, sans-serif; font-size: 16px; color: #333; line-height: 1.5; margin: 0; padding: 0; }
+        p { margin-bottom: 16px; text-align: justify; }
+        h1 { text-align: center; color: #555; }
+      </style>
+</head>
+<body>
+   <h2>ARIA (Accessible Rich Internet Applications)</h2>
+
+Um dos principais padrões usados para melhorar a acessibilidade da web é o ARIA. ARIA é uma especificação do W3C que é projetada para tornar o conteúdo e a 
+navegação mais acessíveis para pessoas que usam leitores de tela ou outras tecnologias assistivas.
+
+ <h3>ARIA Roles</h3>
+
+Os roles ARIA descrevem o tipo ou a natureza de um widget ou a estrutura de um elemento. Eles ajudam os leitores de tela a entender o conteúdo e fornecer a informação correta para os usuários. Por exemplo, o role navigation pode ser usado em uma barra de navegação:
+
+<nav role="navigation">
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">Sobre</a></li>
+  </ul>
+</nav>
+
+<h3>ARIA Properties</h3>
+
+As propriedades ARIA são usadas para dar informações adicionais sobre os elementos. Por exemplo, a propriedade aria-labelledby pode ser usada para indicar o rótulo de um elemento:
+
+<button id="playButton" aria-labelledby="playLabel">Play</button>
+<span id="playLabel" hidden>Play the video</span>
+
+
+<h3>ARIA States</h3>
+
+Os estados ARIA indicam o estado atual de um elemento. Por exemplo, o estado aria-checked pode ser usado para indicar se uma checkbox está marcada ou não:
+<input type="checkbox" aria-checked="false">
+
+<h3>Boas Praticas de acessibilidade</h3>
+
+<b>Semântica:</b> Usar elementos HTML de forma apropriada (ex.: header, nav, main, footer).<br>
+<b>Atributos ARIA: </b>Adicionar roles e propriedades ARIA para melhorar a acessibilidade quando os elementos nativos não são suficientes.<br>
+<b>Texto alternativo:</b> Usar o atributo alt em imagens (img) para descrever seu conteúdo.<br>
+<b>Labels em formulários:</b> Associar label aos campos de formulário via for ou colocá-los dentro do rótulo.<br>
+<b>Teclado:</b> Garantir que todos os elementos interativos sejam acessíveis via teclado.<br>
+<b>Contraste de cores:</b> Assegurar contraste suficiente entre texto e plano de fundo.<br>
+<b>Título de página:</b> Incluir títulos claros e descritivos com title.<br>
+<b>Cabeçalhos estruturados:</b> Usar corretamente h1 a h6 para hierarquia de informações.<br>
+<b>Legendas:</b> Fornecer legendas e transcrições para mídias como vídeos e áudios.<br>
+<b>Navegação: </b>Permitir saltos rápidos para o conteúdo principal (ex.: links "Pular para o conteúdo").<br>
+
+
+
+
+
+
+
+
+</body>
+</html>

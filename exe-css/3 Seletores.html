@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELETORES</title>
+    <style>
+        body { font-family: Arial, sans-serif; font-size: 16px; color: #333; line-height: 1.5; margin: 0; padding: 0; }
+        p { margin-bottom: 16px; text-align: justify; }
+        h1 { text-align: center; color: #555; }
+      </style>
+</head>
+<body>
+    
+    Seletor Universal
+    irá aplicar os atributos para todos os elementos que aceitarem essa propriedade, então nesse caso tudo irá ter cor verde e irá usar a fonte verdana.
+    
+    * {
+        color: green;
+        font-family: Verdana;
+    }
+
+    -------------------------------------------
+    Seletor Elemento
+    irá aplicar os atributos para todos os elementos <p> dentro do seu HTML, e ira aplicar cor verde e irá usar a fonte verdana.
+
+    p {
+        color: green;
+        font-family: Verdana;
+    }
+
+-------------------------------------------------
+    SELETOR ID
+    O seletor por ID é especifico e único já que apenas um id com esse valor pode ser atribuído no HTML. o seletor irá buscar pelo elemento que tiver o atributo id=”titulo” dentro do HTML e ira aplicar cor verde e irá usar a fonte verdana. No CSS o seletor id é identificado por começar com o simbolo # seguido do valor do id.
+    
+    #titulo {
+        color: green;
+        font-family: Verdana;
+    }
+
+    -------------------------------------------
+    SELETOR CLASSE
+    O seletor por classe é generico e aplica para todos os elementos que tiverem a classe associada a ele, mesmo que sejam diferentes elementos distintos. o seletor irá buscar por elementos que contenham o atributo class=”minha-classe” dentro do HTML e ira aplicar cor verde e irá usar a fonte verdana. No CSS o seletor classe é identificado por começar com o . seguido pelo nome da classe.
+    elementos html podem ter múltiplas classes
+    
+    .minha-classe {
+    color: green;
+    font-family: Verdana;
+}
+
+---------------------------------------------------------------------------------
+PSEUDO-CLASSES em CSS 📝
+
+Representadas por	:
+
+  ex: 	:active	:checked	:enabled	   :disabled	:corner-present	
+	    :empty	:end		:first	       :hover	     :double-button
+
+:hover	->	quando passa o mouse por cima acontece algo
+
+	ex:	div:hover {
+            	background-color: yellow;
+        	}
+
+div > p	-> parágrafo que está dentro da div (p é filho de div)
+
+Deixar texto de "p" invisível:
+	
+	div > p {
+	   display: none;
+	}
+
+Deixar texto de "p" visível quando passar o mouse em cima:
+  (útil para criar menu)
+
+	div:hover > p {
+	        display: block;
+	}
+
+div	->	é um espaço qualquer
+
+height	->	altura
+
+width	->	largura
+
+border	->	borda		ex:	border: 1px solid black; (shorthand)
+
+display: inline-block; 	->	 tudo na mesma linha
+
+
+---------------------------------------------------------------------------------
+
+    SELETORES DESCENDENTES: 
+
+    <p>Minha lista</p>
+    <div>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </div>
+
+    EX 1: 
+    Nesse css, o seletor irá aplicar apenas para os elementos UL que tenham DIV como pai, mesmo que tenham outros UL dentro da sua pagina ele irá aplicar especificamente para esse cenário pois esta dentro da DIV
+
+    div ul { <!-- Para realizar a estilizaçao com descendencia precisa por o pai dar espaço e o filho a seguir-->
+        color: green;
+        font-family: Verdana;
+    }
+
+EX2:
+e isso pode ficar ainda mais especifico onde nesse codigo irá aplicar apenas para LI que tiverem dentro de um UL que esteja dentro de uma DIV
+
+    div ul li { <!-- Pai(DIV) espaço, filho(UL) espaço, filho do filho (LI) a seguir-->
+        color: green;
+        font-family: Verdana;
+              }
+
+-------------------------------------------------
+AGRUPAMENTO DE SELETORES: aplicar o mesmo CSS para varios seletores ao mesmo tempo EX: aplicar seu CSS para uma DIV e um P. Fazemos isso separando os seletores por virgula.
+EX:
+Aplica em todos os elementos DIV
+
+div { 
+    color: green;
+    font-family: Verdana; }
+
+ -------------------------------------------
+Aplica em todos os elementos DIV e P 
+
+div, p { 
+    color: green;
+    font-family: Verdana; }
+
+ -------------------------------------------
+Aplica em todos os elementos DIV e P e também a todas as classes minha-classe
+
+div, p, .minha-classe { 
+    color: green;
+    font-family: Verdana; }
+
+ -------------------------------------------
+Aplica em todos os elementos P dentro de DIV e também a todas as classes minha-classe
+
+div p, .minha-classe { 
+    color: green;
+    font-family: Verdana; }
+
+é importante termos CSS específicos pois em caso de um conflito o mais especifico será aplicado, mas o ideal é você começar com seletores genéricos e ir especificando conforme sentir necessidade.
+
+----------------------------------------------------------------------------------
+
+O CSS é flexível com quebras de linha e espaçamentos, tanto que você pode escrever tudo em uma unica linha se você quiser, mas como convenção para que seja mais legível e fácil de dar manutenção utilizamos o padrão.
+
+seletor { <!--Formatação padrao do CSS -->
+    propriedade: valor;
+    propriedade: valor;
+}
+Esse padrão pode ter algumas variações de projeto para projeto, o importante é você definir um padrão e seguir ele.
+
+Além disso podemos adicionar comentarios no nosso CSS para adicionar alguma informação extra utilizando a sintaxe
+
+/* comentarios CSS */
+
+</body>
+</html>

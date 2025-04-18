@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipografia</title>
+    <style>
+        body { font-family: Arial, sans-serif; font-size: 16px; color: #333; line-height: 1.5; margin: 0; padding: 0; }
+        p { margin-bottom: 16px; text-align: justify; }
+        h1 { text-align: center; color: #555; }
+      </style>
+</head>
+<body>
+    Existem 5 estilos principais de fontes, devemos escolher uma fonte que seja facil de ler, mas tambem ajudem a passar a mensagem ou o tom da mensagem para o leitor. por exemplo, a fonte Times New Roman é comummente utilizada para fins legais e documentos. ja a Fonte Comic Sans é muito usada para conteudo infantil e passa um tom informal, então você não deve escrever um email para seu chefe usando essa fonto, pois pode ser inapropriado.
+
+Os estilos são:
+
+Script / Handwriting
+Decorativo / Display
+Monospace
+Serif
+Sans-Serif
+Script / Handwriting
+São fontes que parecem ser escrita a mão, são dificeis de ler em tamanhos pequenos, muito usadas em convites de casamentos para passar o tom de elegância.
+
+Decorative
+Fontes decorativas são meramente ornamentais, nunca deve ser utilizadas para textos longos, são geralmente utilizadas em cabeçalhos ou para decoração pois geralmente causa grande impacto pois tem muita personalidade
+
+Monospace
+As fontes monospace são aquelas que independente da letra ocupam o mesmo espaço no texto, (um i tem o mesmo espacamento de um O). são essas as fontes que utilizamos para codificar, pois precisamos do mesmo espaçamento para definir a identação do código.
+
+Serif
+Geralmente são usadas para conteudos mais formais ou que precisem de muita leitura, a serifa é aquele pequeno traço que vemos em cima e embaixo de letra, Times New Roman é uma delas.
+
+Sans-serif
+Fontes sem serifa são como o nome ja diz, sem aquele traço em cima e embaixo da fonte, são fontes mais simples e de facil leitura e passam um tom mais moderno, a grande maioria das fontes utilizadas na WEB são Sans-serif.
+
+-----------------------------------------------------------------------------
+Usando WEB fonts
+
+No seu sistema operacional seja do computador, do celular ou qualquer dispositivo existe um pacote de fontes pre instaladas, você pode também baixar fontes e instalar, porem se você utilizar uma fonte que só tem no seu computador, ela não será carrega no dispositivo de outra pessoa a não ser que ela baixe e instale, e cada sistema operacional também tem fontes diferentes. para resolver isso nó geralmente utilizamos fontes da internet que são repositorios de fontes na internet onde nos escolhemos as fontes que queremos e importamos para nosso CSS.
+
+Existem varias formas de você adicionar sua fonte no seu site, porem a mais utilizada hoje em dia é atraves do @import no CSS.
+Exemplo:
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans&family=Noto+Sans&family=Roboto:wght@100&display=swap');
+
+um dos repositórios de fontes mais conhecidos é o Google Fonts. nele você pode pesquisar, escolher sua fonte e no proprio site ja gerar o import para seu CSS.
+
+-----------------------------------------------------------------------------
+
+Propriedades de Fonte e Texto
+
+font-style
+O font-style define se a fonte deve ser Normal, Italic ou Oblique baseado na font-family. A fonte normal é o padrão, mesmo sem definir no CSS, este é o estilo que será aplicado, italic são geralmente de natureza cursiva e geralmente utilizam menos espaço horizontal do que a normal já a oblique geralmente são versões inclinadas da normal.
+
+Quando o estilo não está disponível na font-family o italico e obliquo são simuladas inclinando artificialmente os glifos da fonte normal.
+
+font-style: normal;
+font-style: italic;
+font-style: oblique;
+
+-----------------------------------------------------------------------------
+font-weight
+A propriedade CSS font-weight especifica o peso ou a intensidade da fonte (ex.: negrito). Algumas fontes oferecem apenas as opções normal e negrito.
+
+font-weight: normal;
+font-weight: bold;
+-----------------------------------------------------------------------------
+
+/* Relativo ao elemento pai */
+font-weight: lighter;
+font-weight: bolder;
+
+font-weight: 100;
+font-weight: 200;
+font-weight: 300;
+font-weight: 400;
+font-weight: 500;
+font-weight: 600;
+font-weight: 700;
+font-weight: 800;
+font-weight: 900;
+-----------------------------------------------------------------------------
+
+font-size
+A propriedade font-size no CSS estabelece o tamanho da fonte.
+
+/* <absolute-size> values */
+font-size: xx-small;
+font-size: x-small;
+font-size: small;
+font-size: medium;
+font-size: large;
+font-size: x-large;
+font-size: xx-large;
+
+/* <relative-size> values */
+font-size: smaller;
+font-size: larger;
+
+/* <length> values */
+font-size: 12px;
+font-size: 0.8em;
+
+/* <percentage> values */
+font-size: 80%;
+line-height
+-----------------------------------------------------------------------------
+A propriedade line-height define a altura / espaçamento entre linhas.
+
+/* Valor padrão */
+line-height: normal;
+
+/* valores sem unidade são multiplicados pelo tamanho da fonte para definir o espaçamento*/
+line-height: 3.5;
+
+/* valor com unidade */
+line-height: 3em;
+
+/* porcentagem do tamanho da fonte */
+line-height: 34%;
+-----------------------------------------------------------------------------
+
+text-decoration
+A propriedade text-decoration é usada para definir a formatação de underline, overline, line-through ou blink. As decorações underline e overline são posicionadas abaixo e acima do texto (respectivamente), e line-through cortando-o.
+
+/* Valores Chave */
+text-decoration: none;                 /* Sem decoração */
+text-decoration: line-through red;     /* riscado vermelho */
+text-decoration: overline wavy red;    /* Sublinhado ondulado vermelho */
+text-decoration: underline dashed red; /* Sublinhado ondulado vermelho */
+text-decoration: blink;                        /* piscar */
+-----------------------------------------------------------------------------
+
+text-alignment
+Está propriedade define o alinhamento do texto
+
+text-align: center;
+text-align: left;
+text-align: right;
+text-align: justify;
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

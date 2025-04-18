@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários HTML</title>
+    <style>
+        body { font-family: Arial, sans-serif; font-size: 16px; color: #333; line-height: 1.5; margin: 0; padding: 0; }
+        p { margin-bottom: 16px; text-align: justify; }
+        h1 { text-align: center; color: #555; }
+      </style>
+</head>
+<body>
+    <p>Aqui está a estrutura básica de um formulário HTML:</p>
+
+    <form action="/url-para-enviar-dados-do-formulário" method="post">
+        <!-- Elementos de entrada vão aqui -->
+    </form>
+
+    <p>A tag <b>FORM</b> possui dois atributos muito importantes:</p>
+
+        <b>action:</b> Especifica a URL para onde os dados do formulário devem ser enviados após o envio.<br>
+        <b>method: </b>Define o método HTTP usado para enviar os dados. Os valores comuns são “get” e “post”.
+
+<p><h3>Exemplo Prático:Formulário de Login</h3>
+ Para entender melhor, vamos criar um formulário de login. Este formulário terá campos para o nome de usuário e a senha e um botão para enviar os dados.</p>
+
+ <form action="/url-de-login" method="post">
+    <label for="username">Nome de usuário:</label><br>
+    <input type="text" id="username" name="username"><br>
+    <label for="pwd">Senha:</label><br>
+    <input type="password" id="pwd" name="pwd"><br>
+    <input type="submit" value="Login">
+</form>
+
+<br>Neste exemplo:
+
+Usamos a tag <b>label</b> para adicionar rótulos aos campos de entrada. O atributo for na tag <b>label </b> deve corresponder ao atributo id do elemento de entrada relacionado.<br>
+A tag <b>input</b> é usada para criar elementos de entrada. O atributo type define o tipo de entrada e o atributo name define o nome do elemento de entrada.
+
+Dentro da tag <b>input</b>, usamos diferentes tipos para diferentes campos:<br>
+
+<b>type="text": </b>Define um campo de texto de linha única.<br>
+<b>type="password": </b>Define um campo de entrada para a senha, onde o texto é automaticamente mascarado.<br>
+<b>type="submit": </b>Define um botão de envio. Quando o usuário clica neste botão, o formulário é enviado para a URL definida no atributo action do formulário.<br>
+
+<p><h4>Exercício: Crie um formulário para solicitar feedback de usuários. Ele deve conter campos para nome, endereço de e-mail e um campo de texto para o feedback. Inclua também um botão de envio.</h4></p>
+
+  <form>
+    <label for="userName">Nome:</label>
+    <input type="text" id="userName" name="userName" required><br>
+    
+    <label for="userEmail">Endereço de e-mail:</label>
+    <input type="email" id="userEmail" name="userEmail" required><br>
+
+    <label for="feedback">Feedback:</label><br>
+    <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br>
+  
+    <button type="submit">Enviar</button>
+  </form>
+  
+<p><h3><u>Exemplo completo formulario:</u></h3></p>
+
+<label for="fname">Nome:</label><br>
+<input type="text" id="fname" name="fname"><br> <!--O type="text" cria uma caixa de entrada de texto de uma única linha.-->
+
+<label for="pwd">Senha:</label><br> <!--O type="password" cria uma caixa de entrada que mascara o texto digitado, ideal para campos de senha.-->
+<input type="password" id="pwd" name="pwd">
+
+<br>
+<label for="male">Masculino</label> <!--O type="radio" cria botões de opção, que permitem ao usuário selecionar apenas uma opção de um conjunto.-->
+<input type="radio" id="male" name="gender" value="male">
+<label for="female">Feminino</label>
+<input type="radio" id="female" name="gender" value="female">
+
+<br>
+<label for="optin">Aceito receber novidades pelo e-mail</label> <!--O type="checkbox" cria uma caixa de seleção, que permite ao usuário selecionar várias opções de um conjunto.--> 
+<input type="checkbox" id="optin" name="optin" value="Yes">
+
+<br>
+<label for="feedback">Deixe-nos seu feedback:</label><br> <!--A tag <textarea> cria uma área de texto multilinha, útil para entradas de texto mais longas.-->
+<textarea id="feedback" name="feedback" rows="4" cols="50"></textarea>
+ 
+<br>
+<label for="country">País:</label><br> <!--A tag <select> cria uma lista suspensa de opções. As opções individuais são definidas com a tag <option>.-->
+<select id="country" name="country">
+  <option value="brasil">Brasil</option>
+  <option value="usa"selected> Estados Unidos</option>
+  <option value="canada">Canadá</option>
+</select>
+
+<br><input type="submit" value="Enviar"><!--O type="submit" cria um botão que, quando clicado, envia os dados do formulário para o URL especificado no atributo action do formulário.-->
+
+<p><h3>Exemplo Botão de enviar com javaScrip/h3></p>
+<!--Vamos considerar um cenário onde queremos verificar se todas as informações necessárias foram preenchidas 
+no formulário antes de enviar os dados. Para isso, podemos usar a função preventDefault() de JavaScript que 
+impede a ação padrão de um evento de ocorrer – neste caso, o evento de envio do formulário.-->
+
+  <form id="myForm">
+    <label for="fname">Primeiro nome:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <input type="submit" value="Enviar">
+  </form>
+   
+  <script>
+  document.getElementById("myForm").addEventListener("submit", function(event){
+    var form = document.getElementById("myForm");
+    if(form.fname.value === '') {
+      event.preventDefault();
+      alert('Por favor, preencha o campo do primeiro nome.');
+    }
+  });
+  </script>
+  
+<!--Neste exemplo, usamos o método addEventListener() para escutar o evento de envio do formulário. 
+Se o campo “Primeiro nome” estiver vazio quando o usuário clicar em “Enviar”, a função preventDefault() 
+impedirá o formulário de ser enviado, e um alerta será exibido para o usuário.-->
+
+</body>
+</html>

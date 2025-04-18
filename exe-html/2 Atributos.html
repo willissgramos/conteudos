@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .alerta {
+        color: green;
+        text-transform: uppercase;
+
+        }
+    </style>
+
+    <title>Atributos HTML</title>
+</head>
+
+<body>
+    <u><h1>Class, Id , Style </h1></u>
+    <div class="alerta">Este é um alerta importante!</div>
+    <div class="alerta">Este é outro alerta importante!</div>
+    <div id="primeiro-alerta">Este é o primeiro alerta!</div> <!--Id unico podemos usar JavaScript para selecionar especificamente essa div e manipulá-la de alguma forma-->
+    <p style="color: red;">Este parágrafo será exibido em vermelho.</p>
+
+   <u><H2>Exercicios</H2></u>
+   <h1 id="titulo-principal">Bem-vindo à minha página web!</h1>
+    <p class="destaque">Este é o primeiro parágrafo.</p>
+    <p class="destaque" style="color: red;">Este é o segundo parágrafo.</p>
+    <p class="destaque">Este é o terceiro parágrafo.</p>
+
+<u><h1>Imagens e links</h1></u>
+<p><b>Caminho Absoluto:</b>Um caminho absoluto é um caminho completo para o arquivo, incluindo o protocolo (http ou https), o domínio e o caminho completo para o arquivo no servidor. Por exemplo, src="https://www.seusite.com/imagens/sua-imagem.jpg"     </p>
+<p><b>Caminho Relativo:</b>Por outro lado, um caminho relativo é um caminho para o arquivo em relação ao arquivo HTML atual. Por exemplo, se sua imagem estiver na mesma pasta que seu arquivo HTML, você poderia usar src="sua-imagem.jpg".     </p>
+
+<p><b>Atributo src:</b> O atributo src (source) é usado para especificar o caminho para a imagem que você deseja incorporar.<br>
+<b>Atributo alt:</b> O atributo alt (alternative) é usado para fornecer um texto alternativo para a imagem, que será exibido se a imagem não puder ser carregada por algum motivo.<br>
+<b>Atributos width e height: </b> Os atributos width (largura) e height (altura) são usados para especificar as dimensões da imagem, se você colocar apenas a largura WIDTH a altura ira ficar proporcional<br>
+
+<p>Agora, vamos passar para os atributos para links. O elemento <b>A</b> é usado para criar links em uma página web. Ele tem vários atributos, mas vamos nos concentrar em dois dos mais importantes: <b>href e target.</b><br>
+<b>Atributo href:</b> O atributo href (Hypertext REFerence) é usado para especificar o URL para o qual o link deve apontar. Aqui está um exemplo:,<br>a
+<b>Atributo target: </b>O atributo target é usado para especificar onde o link será aberto. O valor <b>_blank </b>fará com que o link seja aberto em uma nova janela ou guia. Aqui está um exemplo: 
+<br><b> A href="https://www.seusite.com" target="_blank">Visite nosso site A> </b>'<br>
+</p>
+
+<h1><u>Exercicios</u></h1>
+Caminho Relativo ( imagem mesma pasta do projeto)<br>
+<img src="Kratos.jpg" alt="Imagem Kratos pasta local" width="400"> 
+
+<Br> Caminho Absoluto (imagem retirada da internet)
+<img src="https://sm.ign.com/ign_br/gallery/e/every-char/every-character-in-god-of-war-ragnarok_pcms.jpg" alt="Imagem Kratos internet" width="300">
+
+
+
+</body>
+</html>

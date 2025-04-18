@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herança e Especifidade </title>
+    <style>
+        body { font-family: Arial, sans-serif; font-size: 16px; color: #333; line-height: 1.5; margin: 0; padding: 0; }
+        p { margin-bottom: 16px; text-align: justify; }
+        h1 { text-align: center; color: #555; }
+      </style>
+</head>
+<body>
+    
+    Uma das particularidades do CSS é que ele herda os estilos dos seus ancestrais para os elementos descendentes. Isso facilita nossa vida ao escrever um estilo que vai ser comum a multiplos elementos na página, como por exemplo.
+
+    body {
+        font-family: verdana;
+        font-size: 35px;
+        color: blue;
+    }
+tudo que estiver dentro do body sera estilizado e herdara o css.
+--------------------------------------------------------------------------------------
+Especificidade:
+Sempre o mais especifico é o que será aplicado, mas como saber qual é o mais especifico? Vou mostrar para você a lista de especificidade do menos especifico para o mais especifico, ou seja, quanto mais abaixo na lista é o que será aplicado.
+
+universal (*)
+elemento HTML (div)
+classe (.minha-classe)
+id (#meu-id)
+--------------------------------------------------------------------------------------
+
+Pseudo-classes:
+Existem diversos pseudo-classes que podem ser utilizadas, vou mostrar alguns exemplo mais comuns para vocês, mas segue o link com a lista completa de pseudo-classes e como usar Pseudo-classes.
+
+/*aplica a cor vermelha ao passar o mouse sob o link.*/
+a:hover {
+    color: red;
+}
+ 
+/*aplica a cor vermelha para links ja visitados.*/
+a:visited {
+    color: red;
+}
+ 
+/*aplica a cor a todos os elementos vazios.*/
+div:empty {
+    background: lime;
+}
+ 
+/*aplica o background para elementos desabilitados no formulário.*/
+input:disabled {
+        background: #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
