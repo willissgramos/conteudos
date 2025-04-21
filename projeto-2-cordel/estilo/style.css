@@ -1,101 +1,101 @@
-@charset "UTF-8";
+@charset "UTF-8"; /* Define o conjunto de caracteres como UTF-8 */
 
-@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Passion+One&display=swap"); /* Importa a fonte Passion One */
+@import url("https://fonts.googleapis.com/css2?family=Sriracha&display=swap"); /* Importa a fonte Sriracha */
 
 :root {
-    --fonte1:Verdana, Geneva, Tahoma, sans-serif;
-    --fonte2: 'Passion One', cursive;
-    --fonte3: 'Sriracha', cursive;
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif; /* Define a fonte padrão */
+    --fonte2: "Passion One", cursive; /* Define a fonte secundária */
+    --fonte3: "Sriracha", cursive; /* Define a fonte terciária */
 }
 
-
 * {
-   margin: 0px;
-   padding:0px;
-   font-size: 1em;
-    }
+    margin: 0px; /* Remove as margens padrão de todos os elementos */
+    padding: 0px; /* Remove os preenchimentos padrão de todos os elementos */
+    font-size: 1em; /* Define o tamanho padrão da fonte */
+}
 
-html, body {
-    min-height: 100%;
-    background-color: darkgray;
-    font-family: var(--fonte1);
-    }
+html,
+body {
+    min-height: 100%; /* Garante que a altura mínima seja 100% da tela */
+    background-color: darkgray; /* Define a cor de fundo como cinza escuro */
+    font-family: var(--fonte1); /* Aplica a fonte padrão definida no :root */
+}
 
 header {
-    background-color: black;
-    color: white;
-    text-align: center;
+    background-color: black; /* Define o fundo do cabeçalho como preto */
+    color: white; /* Define a cor do texto como branco */
+    text-align: center; /* Centraliza o texto */
 }
 
 header > h1 {
-    padding-top: 50px;
-    font-variant: small-caps;
-    font-family: var(--fonte2);
-    font-size: 10vw;
+    padding-top: 50px; /* Adiciona espaçamento superior ao título */
+    font-variant: small-caps; /* Transforma o texto em letras maiúsculas pequenas */
+    font-family: var(--fonte2); /* Aplica a fonte Passion One */
+    font-size: 10vw; /* Define o tamanho da fonte como 10% da largura da viewport */
 }
 
 header > p {
-    padding-bottom: 50px;
+    padding-bottom: 50px; /* Adiciona espaçamento inferior ao parágrafo */
 }
 
-header a, footer a {
-    color: white;
-    text-decoration: none;
-    font-weight: bolder;
+header a,
+footer a {
+    color: white; /* Define a cor dos links como branco */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: bolder; /* Deixa o texto dos links em negrito */
 }
 
-header a:hover, footer a:hover {
-    text-decoration: underline;
+header a:hover,
+footer a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse sobre os links */
 }
 
-section{
-    padding-top: 10%;
-    padding-bottom: 10%;
-    line-height: 2em;
-    padding-left: 30px;
-    font-family: var(--fonte3);
-    font-size: 3.5vw;
+section {
+    padding-top: 10%; /* Adiciona espaçamento superior às seções */
+    padding-bottom: 10%; /* Adiciona espaçamento inferior às seções */
+    line-height: 2em; /* Define o espaçamento entre linhas */
+    padding-left: 30px; /* Adiciona espaçamento à esquerda */
+    font-family: var(--fonte3); /* Aplica a fonte Sriracha */
+    font-size: 3.5vw; /* Define o tamanho da fonte como 3.5% da largura da viewport */
 }
 
 section > p {
-    padding-bottom: 2em;
+    padding-bottom: 2em; /* Adiciona espaçamento inferior aos parágrafos dentro das seções */
 }
 
 section.normal {
-    background-color: white ;
-    color: black ;
+    background-color: white; /* Define o fundo como branco */
+    color: black; /* Define a cor do texto como preto */
 }
 
 section.imagem {
-    background-color: rgb(51, 51, 51);
-    color: white;
-    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473);
-    background-size: cover;
-    background-attachment: fixed;
+    background-color: rgb(51, 51, 51); /* Define o fundo como cinza escuro */
+    color: white; /* Define a cor do texto como branco */
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473); /* Adiciona uma sombra interna */
+    background-size: cover; /* Faz com que a imagem de fundo cubra toda a área */
+    background-attachment: fixed; /* Faz com que a imagem de fundo permaneça fixa ao rolar a página */
 }
 
 section.imagem > p {
-    display:inline-block;
-    padding: 5px;
-    background-color: rgba(0, 0, 0, 0.514);
-    text-shadow: 1px 1px 0px black;
+    display: inline-block; /* Faz com que os parágrafos sejam exibidos como blocos inline */
+    padding: 5px; /* Adiciona espaçamento interno aos parágrafos */
+    background-color: rgba(0, 0, 0, 0.514); /* Define um fundo semitransparente para os parágrafos */
+    text-shadow: 1px 1px 0px black; /* Adiciona uma sombra ao texto */
 }
 
-section#img01{
-    background-image: url(../imagens/background001.jpg);
-    background-position: right center;
+section#img01 {
+    background-image: url(../imagens/background001.jpg); /* Define a imagem de fundo para a seção com ID img01 */
+    background-position: right center; /* Posiciona a imagem à direita e centralizada verticalmente */
 }
 
-section#img02{
-    background-image: url(../imagens/background002.jpg);
+section#img02 {
+    background-image: url(../imagens/background002.jpg); /* Define a imagem de fundo para a seção com ID img02 */
 }
 
 footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 10px;
-   } 
-
+    background-color: black; /* Define o fundo do rodapé como preto */
+    color: white; /* Define a cor do texto como branco */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px; /* Adiciona espaçamento interno ao rodapé */
+}
