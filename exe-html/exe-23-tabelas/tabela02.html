@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Define o conjunto de caracteres como UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Configura a página para ser responsiva em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define o título da página -->
+    <title>Tabelas e recursos uteis </title>
+
+    <style>
+        /* Define a fonte padrão para o corpo da página */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Estiliza a tabela */
+        table {
+            width: 500px; /* Define a largura da tabela */
+            border-collapse: collapse; /* Remove os espaços entre as bordas das células */
+            position: relative;
+        }
+
+        /* Estiliza as células (td e th) */
+        td, th {
+            border: 1px solid black; /* Adiciona uma borda preta às células */
+            padding: 10px; /* Adiciona espaçamento interno às células */
+        }
+        
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
+        /* Estiliza o cabeçalho (thead) e o rodapé (tfoot) da tabela */
+        thead, tfoot {
+            background-color: gray; /* Define a cor de fundo como cinza */
+            color: white; /* Define a cor do texto como branco */
+            
+        }
+       
+        thead > tr > th { /*Cabeçalho fixo ao rolar a tabela, precisa colocar position: relative em table*/
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
+        }
+
+        tbody> tr:nth-child(2n) { /*efeito zebrado*/
+            background-color: lightgray;
+        }
+
+        /* Alinha os números à direita nas células com a classe "num" */
+        td.num {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <!-- Título principal da página -->
+    <h1>Uso de tabelas grandes</h1>
+
+    <!-- Comentário explicando a estrutura de uma tabela -->
+    <!--
+    ANATOMIA PARA TABELAS GRANDES: Importante usar a maneira semantica para o codigo e a tabela ficar organizada e funcional
+        TABLE - Define a tabela
+            CAPTION - Titulo da tabela
+
+            THEAD - Cabeçalho da tabela
+                TR - Linha da tabela
+                TD - Célula de dados
+                TH - Célula de cabeçalho
+
+            TBODY - Corpo da tabela
+                TR, TD, TH - Linhas e células do corpo
+
+            TFOOT - Rodapé da tabela
+                TR, TD, TH - Linhas e células do rodapé
+
+        SCOPE - Usar para os mecanismos de busca analisar sua tabela de forma coerente
+    -->
+
+    <!-- Início da tabela -->
+    <table>
+        <caption>Tabela de teste </caption> <!--Titulo da tabela -->
+        <!-- Cabeçalho da tabela -->
+        <thead>
+            <tr>
+                <th scope="col">Estado</th> <!-- Define a coluna "Estado" -->
+                <th scope="col" style="width: 50px;">População</th> <!-- Define a coluna "População" -->
+            </tr>
+        </thead>
+
+        <!-- Corpo da tabela -->
+        <tbody>
+            <!-- Cada linha (tr) contém o estado e sua população -->
+            <tr>
+                <td>São Paulo</td> <!-- Nome do estado -->
+                <td class="num">45.919.049</td> <!-- População do estado -->
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21.168.791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17.264.943</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="num">3.506.853</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="num">3.484.456</td>
+            </tr>
+            <tr>
+                <td>Alagoas</td>
+                <td class="num">3.337.357</td>
+            </tr>
+            <tr>
+                <td>Piauí</td>
+                <td class="num">3.273.227</td>
+            </tr>
+            <tr>
+                <td>Distrito Federal</td>
+                <td class="num">3.015.268</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso do Sul</td>
+                <td class="num">2.778.986</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td class="num">2.298.696</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14.873.064</td>
+            </tr>
+            <tr>
+                <td>Tocantins</td>
+                <td class="num">1.572.866</td>
+            </tr>
+            <tr>
+                <td>Acre</td>
+                <td class="num">881.935</td>
+            </tr>
+            <tr>
+                <td>Amapá</td>
+                <td class="num">845.731</td>
+            </tr>
+            <tr>
+                <td>Roraima</td>
+                <td class="num">605.761</td>
+            </tr>
+        </tbody>
+
+        <!-- Rodapé da tabela -->
+        <tfoot>
+            <tr>
+                <th scope="row">Total de Habitantes</th> <!-- Título da linha do rodapé -->
+                <td><strong>211.755.733</strong></td> <!-- Total da população -->
+            </tr>
+        </tfoot>
+    </table>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio nemo quos sed deleniti dolorem esse magni dolor officiis vitae sunt maiores exercitationem, amet, repellat modi commodi dignissimos nesciunt sit atque Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta modi praesentium neque, quibusdam sequi eveniet saepe blanditiis vel ut suscipit, voluptates magni necessitatibus quidem, itaque deserunt magnam ratione fugit? Libero!] Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolor sed dicta, voluptates molestias laboriosam laborum saepe provident officiis adipisci quaerat, in iure unde similique atque iusto, recusandae quis amet. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus enim a nam, porro aut atque distinctio ex recusandae temporibus vel, unde assumenda suscipit laborum nemo! Animi assumenda maiores eos ea! Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum vel molestiae, magni consequuntur earum saepe. Recusandae neque repellat nesciunt, fugiat dicta provident fugit voluptatem veritatis harum ipsa saepe. Facilis, numquam.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio nemo quos sed deleniti dolorem esse magni dolor officiis vitae sunt maiores exercitationem, amet, repellat modi commodi dignissimos nesciunt sit atque Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta modi praesentium neque, quibusdam sequi eveniet saepe blanditiis vel ut suscipit, voluptates magni necessitatibus quidem, itaque deserunt magnam ratione fugit? Libero!] Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolor sed dicta, voluptates molestias laboriosam laborum saepe provident officiis adipisci quaerat, in iure unde similique atque iusto, recusandae quis amet. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus enim a nam, porro aut atque distinctio ex recusandae temporibus vel, unde assumenda suscipit laborum nemo! Animi assumenda maiores eos ea! Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum vel molestiae, magni consequuntur earum saepe. Recusandae neque repellat nesciunt, fugiat dicta provident fugit voluptatem veritatis harum ipsa saepe. Facilis, numquam.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio nemo quos sed deleniti dolorem esse magni dolor officiis vitae sunt maiores exercitationem, amet, repellat modi commodi dignissimos nesciunt sit atque Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta modi praesentium neque, quibusdam sequi eveniet saepe blanditiis vel ut suscipit, voluptates magni necessitatibus quidem, itaque deserunt magnam ratione fugit? Libero!] Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolor sed dicta, voluptates molestias laboriosam laborum saepe provident officiis adipisci quaerat, in iure unde similique atque iusto, recusandae quis amet. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus enim a nam, porro aut atque distinctio ex recusandae temporibus vel, unde assumenda suscipit laborum nemo! Animi assumenda maiores eos ea! Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum vel molestiae, magni consequuntur earum saepe. Recusandae neque repellat nesciunt, fugiat dicta provident fugit voluptatem veritatis harum ipsa saepe. Facilis, numquam.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio nemo quos sed deleniti dolorem esse magni dolor officiis vitae sunt maiores exercitationem, amet, repellat modi commodi dignissimos nesciunt sit atque Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta modi praesentium neque, quibusdam sequi eveniet saepe blanditiis vel ut suscipit, voluptates magni necessitatibus quidem, itaque deserunt magnam ratione fugit? Libero!] Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolor sed dicta, voluptates molestias laboriosam laborum saepe provident officiis adipisci quaerat, in iure unde similique atque iusto, recusandae quis amet. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus enim a nam, porro aut atque distinctio ex recusandae temporibus vel, unde assumenda suscipit laborum nemo! Animi assumenda maiores eos ea! Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum vel molestiae, magni consequuntur earum saepe. Recusandae neque repellat nesciunt, fugiat dicta provident fugit voluptatem veritatis harum ipsa saepe. Facilis, numquam.</p>
+    
+</body>
+</html>
