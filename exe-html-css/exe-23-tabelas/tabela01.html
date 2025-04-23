@@ -27,10 +27,26 @@
             <!--
             HIERARQUIA DE TABELAS (simples)
                 TABLE = tabela
-                    TABLE RON = linha de tabela
-                        TABLE HEADER = cabeçalho de tabela
-                        TABLE DATA = dado de tabela
+                    TABLE ROW (TR)= linha de tabela
+                        TABLE HEADER (TH) = cabeçalho de tabela
+                        TABLE DATA(TD) = dado de tabela
             -->
+ <!--      
+Explicação da hierarquia:
+
+<table>: raiz da tabela.
+
+<thead>: parte superior (cabeçalho), normalmente com <th>.
+
+<tbody>: corpo da tabela (dados normais).
+
+<tfoot>: rodapé (usado para totais ou observações).
+
+<tr>: linha da tabela (usado dentro de thead, tbody ou tfoot).
+
+<th>: célula de título (usada dentro de <tr> no <thead>).
+
+<td>: célula de dados (usada dentro de <tr> no <tbody> ou <tfoot>).-->
            
             <table>
             <tr> <!-- Primeira linha -->

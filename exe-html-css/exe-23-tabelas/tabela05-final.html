@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Final Tabela</title>
+    <style>
+        html {
+            overflow: hidden; /* Esconder a barra de rolagem */
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            position: relative;
+            height: 100vh;
+        }
+
+        table {
+            border-collapse: collapse;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        caption {
+            font-weight: bold;
+            font-size: 1.2em; /* opcional: deixa maior */
+        }
+
+        thead {
+            background-color: gray;
+            color: white;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .destaque {
+            background-color: gray;
+            color: white;
+            text-align: left;
+        }
+
+        .destaquenum {
+            background-color: gray;
+            color: white;
+        }
+
+        .disciplinas {
+            text-align: left;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Exercicio Final de tabela</h1>
+
+    <table>
+        <caption>Dados Escolar</caption>
+
+        <thead>
+            <tr>
+                <th scope="col" rowspan="2">Área</th> <!-- Define o escopo como coluna -->
+                <th scope="col" rowspan="2">Disciplinas</th> <!-- Define o escopo como coluna -->
+                <th scope="col" colspan="2">Notas</th> <!-- Define o escopo como coluna -->
+                <th scope="col" rowspan="2">Média</th> <!-- Define o escopo como coluna -->
+            </tr>
+            <tr>
+                <th scope="col">Nota 1</th> <!-- Define o escopo como coluna -->
+                <th scope="col">Nota 2</th> <!-- Define o escopo como coluna -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="rowgroup" rowspan="4">Exatas</th> <!-- Define o escopo como grupo de linhas -->
+                <td class="disciplinas">Matemática</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <td class="disciplinas">Física</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <td class="disciplinas">Química</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <td class="disciplinas">Biologia</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <th scope="row" colspan="4" class="destaque">Média de Exatas</th> <!-- Define o escopo como linha -->
+                <td class="destaquenum">0.0</td>
+            </tr>
+            <tr>
+                <th scope="rowgroup" rowspan="2">Humanas</th> <!-- Define o escopo como grupo de linhas -->
+                <td class="disciplinas">História</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <td class="disciplinas">Geografia</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <th scope="row" colspan="4" class="destaque">Média de Humanas</th> <!-- Define o escopo como linha -->
+                <td class="destaquenum">0.0</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+
+<!--
+Explicação da hierarquia:
+
+<table>: raiz da tabela.
+
+<thead>: parte superior (cabeçalho), normalmente com <th>.
+
+<tbody>: corpo da tabela (dados normais).
+
+<tfoot>: rodapé (usado para totais ou observações).
+
+<tr>: linha da tabela (usado dentro de thead, tbody ou tfoot).
+
+<th>: célula de título (usada dentro de <tr> no <thead>).
+
+<td>: célula de dados (usada dentro de <tr> no <tbody> ou <tfoot>).-->
