@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colocando paginas locais pelo iframe</title>
+    
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    iframe#tela {
+        width: 95vw;
+        height: 400px;
+        border: 2px solid black;
+    }
+</style>
+
+</head>
+<body>
+    <h1>Colando conteudo de outras paginas na pagina atual</h1>
+<h2>Tabela do ex23</h2>
+    <iframe src="../exe-23-tabelas/tabela06.html" height="500px" width="500px"></iframe>
+
+<h1>Navegando entre paginas no iframe </h1>
+<p>Ao clicar no link abaixo uma pagina diferente ira aparecer no iframe abaixo </p>
+<ul>
+    <li><a href="/projeto-1-android/index.html" target="frame">Primeira página: Projeto Android</a> </li>
+    <li><a href="/projeto-2-cordel/index.html" target="frame">Segunda página: Projeto Cordel</a></li>
+</ul>
+
+<iframe id="tela" name="frame" srcdoc="<h1> Escolha uma das opções acima </h1>">
+<p>Infelizmente seu navegador não é compatível com
+isso.</p>
+</iframe>
+
+
+</body>
+</html>
