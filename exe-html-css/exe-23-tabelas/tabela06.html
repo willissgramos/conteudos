@@ -40,66 +40,125 @@
         col.profi {
             background-color: brown;
         }
+        div#tabela-responsiva {
+            overflow-x: auto;
+        }
     </style>
 </head>
 
 <body>
     <h1>Exercicio de Tabela</h1>
-    <table>
-        <colgroup> <!--Usando essa tag é ,ais facil estilizar a coluna de uma vez só, util para  tabelas ,muito longas
-            se usar o span="" a configuração fica em mais colunas ex
-            <col class="nome"span="3"> as colunas de idade e sexo tambem ficarão azul
-            -->
-            <col class="nome">
-            <col class="sexo">
-            <col class="idade">
-            <col class="profi">
-        </colgroup>
-        <caption>Cadastro</caption>
-        <tr>
-            <th scope="col"> Nome</th>
-            <th scope="col"> Sexo</th>
-            <th scope="col"> Idade</th>
-            <th scope="col"> Profissão</th>
-        </tr>
-        <tr>
-            <td>Ana Maria</td>
-            <td>F</td>
-            <td>25</td>
-            <td>Jornalista</td>
-        </tr>
-        <tr>
-            <td>Cláudio</td>
-            <td>M</td>
-            <td>28</td>
-            <td> Programador</td>
-        </tr>
-        <tr>
-            <td>Gustavo</td>
-            <td>M</td>
-            <td>42</td>
-            <td>Professor</td>
+    <div id="tabela-responsiva">
+        <table>
+            <colgroup> <!--
+                Usando essa tag é ,ais facil estilizar a coluna de uma vez só, util para  tabelas ,muito longas
+                se usar o span="" a configuração fica em mais colunas ex
+                <col class="nome"span="3"> as colunas de idade e sexo tambem ficarão azul
+                Tabela Responsiva : Voce deve envelopar toda a tabela com uma div e adicionar uma id, depois adidiciona a configuração na id no css div#tabela-responsiva {
+                        overflow-x: auto;
 
-        </tr>
-        <tr>
-            <td>Hélio</td>
-            <td>M</td>
-            <td>19</td>
-            <td>Vendedor</td>
-        </tr>
-        <tr>
-            <td>Maria</td>
-            <td>F</td>
-            <td>39</td>
-            <td>Médica</td>
-        </tr>
-        <tr>
-            <td>Otávio</td>
-            <td>M</td>
-            <td>22</td>
-            <td>Nutricionista</td>
-            
-    </table>
+                    com essa configuração a tabela apenas tera rolagem lateral
+}
+                -->
+                <col class="nome">
+                <col class="sexo">
+                <col class="idade">
+                <col class="profi">
+            </colgroup>
+            <caption>Cadastro</caption>
+            <tr>
+                <th scope="col"> Nome</th>
+                <th scope="col"> Sexo</th>
+                <th scope="col"> Idade</th>
+                <th scope="col"> Profissão</th>
+                <th scope="col">Filhos</th>
+                <th scope="col">CPF</th>
+                <th scope="col">Telefone</th>
+            </tr>
+            <tr>
+                <td>Ana Maria</td>
+                <td>F</td>
+                <td>25</td>
+                <td>Jornalista</td>
+                <td>0</td>
+                <td>00000000000</td>
+                <td>xxxxxxxxxxx</td>
+            </tr>
+            <tr>
+                <td>Cláudio</td>
+                <td>M</td>
+                <td>28</td>
+                <td> Programador</td>
+                 <td>0</td>
+                <td>00000000000</td>
+                <td>xxxxxxxxxxx</td>
+            </tr>
+            <tr>
+                <td>Gustavo</td>
+                <td>M</td>
+                <td>42</td>
+                <td>Professor</td>
+                 <td>0</td>
+                <td>00000000000</td>
+                <td>xxxxxxxxxxx</td>
+            </tr>
+            <tr>
+                <td>Hélio</td>
+                <td>M</td>
+                <td>19</td>
+                <td>Vendedor</td>
+                 <td>0</td>
+                <td>00000000000</td>
+                <td>xxxxxxxxxxx</td>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td>F</td>
+                <td>39</td>
+                <td>Médica</td>
+                 <td>0</td>
+                <td>00000000000</td>
+                <td>xxxxxxxxxxx</td>
+            </tr>
+            <tr>
+                <td>Otávio</td>
+                <td>M</td>
+                <td>22</td>
+                <td>Nutricionista</td>
+                 <td>0</td>
+                <td>00000000000</td>
+                <td>xxxxxxxxxxx</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>M</td>
+                <td>25</td>
+                <td>policial</td>
+                 <td>0</td>
+                <td>00000000000</td>
+                <td>xxxxxxxxxxx</td>
+            </tr>
+            <tr>
+                <td>Antonia</td>
+                <td>F</td>
+                <td>25</td>
+                <td>professora</td>
+                 <td>0</td>
+                <td>00000000000</td>
+                <td>xxxxxxxxxxx</td>
+            </tr>
+            <tr>
+                <td>Joana</td>
+                <td>F</td>
+                <td>25</td>
+                <td>vigilante</td>
+                 <td>0</td>
+                <td>00000000000</td>
+                <td>xxxxxxxxxxx</td>
+            </tr>
+        
+        </table>
+    </div>
 </body>
 
 </html>
