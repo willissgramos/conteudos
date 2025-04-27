@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna o site responsivo -->
+    <title>Elementos color, range e file</title> <!-- Título da página -->
+</head>
+
+<body>
+
+    <h1>Exemplo de Formulário</h1> <!-- Título principal da página -->
+
+    <!-- Início do formulário -->
+    <form action="cadastro.php" method="POST" autocomplete="on">
+        <!-- 
+            action="cadastro.php": Define o arquivo para onde os dados do formulário serão enviados.
+            method="POST": Envia os dados de forma segura, sem exibi-los na URL.
+            autocomplete="on": Ativa o preenchimento automático para os campos do formulário.
+        -->
+
+        <p>
+            <label for="icor">Cor: </label> <!-- Rótulo para o campo de seleção de cor -->
+            <input type="color" name="cor" id="icor" value="#00ff00">
+            <!-- 
+                type="color": Cria um seletor de cores.
+                name="cor": Nome do campo, usado para identificar o dado no backend.
+                id="icor": Identificador único para associar ao <label>.
+                value="#00ff00": Define a cor padrão como verde (#00ff00).
+            -->
+        </p>
+
+        <p>
+            <label for="inivel">Nível de Satisfação: </label> <!-- Rótulo para o controle deslizante -->
+            <input type="range" name="nivel" id="inivel" min="1" max="5" value="2">
+            <!-- 
+                type="range": Cria um controle deslizante para selecionar valores dentro de um intervalo.
+                name="nivel": Nome do campo, usado para identificar o dado no backend.
+                id="inivel": Identificador único para associar ao <label>.
+                min="1": Define o valor mínimo permitido como 1.
+                max="5": Define o valor máximo permitido como 5.
+                value="2": Define o valor padrão como 2.
+            -->
+        </p>
+
+        <p>
+            <label for="ifoto">Foto do perfil:</label> <!-- Rótulo para o campo de upload de arquivo -->
+            <input type="file" name="foto" id="ifoto">
+            <!-- 
+                type="file": Cria um campo para upload de arquivos.
+                name="foto": Nome do campo, usado para identificar o dado no backend.
+                id="ifoto": Identificador único para associar ao <label>.
+
+                    OBS: Quando o formulario tem upload de arquivos deve-se usar o metodo POST
+            -->
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <!-- 
+                type="submit": Botão para enviar o formulário.
+                value="Enviar": Texto exibido no botão.
+            -->
+
+            <input type="reset" value="Limpar">
+            <!-- 
+                type="reset": Botão para limpar todos os campos do formulário.
+                value="Limpar": Texto exibido no botão.
+            -->
+        </p>
+    </form>
+    <!-- Fim do formulário -->
+
+</body>
+
+</html>
