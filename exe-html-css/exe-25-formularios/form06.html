@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna o site responsivo -->
+    <title>Select, datalist e textarea</title> <!-- Título da página -->
+</head>
+
+<body>
+    <!-- Início do formulário -->
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <!-- 
+            action="cadastro.php": Define o arquivo para onde os dados do formulário serão enviados.
+            method="get": Envia os dados anexados à URL (menos seguro, mas útil para buscas).
+            autocomplete="on": Ativa o preenchimento automático para os campos do formulário.
+        -->
+
+        <p>
+            <label for="iest">Estado</label> <!-- Rótulo para o campo de seleção de estado -->
+            <select name="estado" id="iest">
+                <!-- 
+                    select: Cria uma lista suspensa para selecionar uma opção.
+                    name="estado": Nome do campo, usado para identificar o dado no backend.
+                    id="iest": Identificador único para associar ao <label>.
+                -->
+                <option value="#" selected>--- Escolha ---</option>
+                <!-- 
+                    option: Define uma opção dentro da lista suspensa.
+                    value="#": Valor enviado ao backend se esta opção for selecionada.
+                    selected: Define esta opção como selecionada por padrão.
+                -->
+                <optgroup label="Região Sudeste">
+                    <!-- 
+                        optgroup: Agrupa opções relacionadas dentro da lista suspensa.
+                        label="Região Sudeste": Define o título do grupo de opções.
+                    -->
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+
+                <optgroup label="Região Nordeste">
+                    <option value="MA">Maranhão</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                </optgroup>
+            </select>
+        </p>
+
+        <p>
+            <label for="iprof">Profissão: </label> <!-- Rótulo para o campo de profissão -->
+            <input type="text" name="prof" id="iprof" list="lstprof">
+            <!-- 
+                type="text": Campo de texto para entrada de dados.
+                name="prof": Nome do campo, usado para identificar o dado no backend.
+                id="iprof": Identificador único para associar ao <label>.
+                list="lstprof": Associa o campo a uma lista de sugestões (datalist).
+            -->
+
+            <datalist id="lstprof">
+                <!-- 
+                    datalist: Define uma lista de sugestões para o campo associado.
+                    id="lstprof": Identificador único para associar ao atributo "list" do campo.
+                -->
+                <option>Administrador</option>
+                <option>Contabilista</option>
+                <option>Desenvolvedor</option>
+                <option>Professor</option>
+            </datalist>
+        </p>
+
+        <p>
+            <label for="imsg">Mensagem: </label><br> <!-- Rótulo para o campo de mensagem -->
+            <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+            <!-- 
+                Lembrando que precisa ser metodo POST para esses tipo de formulario
+                textarea: Cria um campo de texto multilinha.
+                name="msg": Nome do campo, usado para identificar o dado no backend.
+                id="imsg": Identificador único para associar ao <label>.
+                cols="30": Define a largura do campo em colunas.
+                rows="10": Define a altura do campo em linhas.
+            -->
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <!-- 
+                type="submit": Botão para enviar o formulário.
+                value="Enviar": Texto exibido no botão.
+            -->
+
+            <input type="reset" value="Limpar">
+            <!-- 
+                type="reset": Botão para limpar todos os campos do formulário.
+                value="Limpar": Texto exibido no botão.
+            -->
+        </p>
+    </form>
+    <!-- Fim do formulário -->
+</body>
+
+</html>
