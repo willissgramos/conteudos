@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna o site responsivo -->
+    <title>Formulários com telefone e e-mail</title> <!-- Título da página -->
+</head>
+
+<body>
+
+    <h1>Exemplo de Formulário</h1> <!-- Título principal da página -->
+    <!-- Início do formulário -->
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <!-- 
+            action="cadastro.php": Define o arquivo para onde os dados do formulário serão enviados.
+            method="get": Envia os dados anexados à URL (menos seguro, mas útil para buscas).
+            autocomplete="on": Ativa o preenchimento automático para os campos do formulário.
+        -->
+
+        <fieldset>
+            <!-- Agrupa os campos relacionados para organização e semântica -->
+            <legend>Dados pessoais</legend> <!-- Título do grupo de campos -->
+
+            <p>
+                <label for="inome">Nome</label> <!-- Rótulo para o campo de nome -->
+                <input type="text" name="nome" id="inome" minlength="5" maxlength="20" required>
+                <!-- 
+                    type="text": Campo de texto para entrada de dados.
+                    name="nome": Nome do campo, usado para identificar o dado no backend.
+                    id="inome": Identificador único para associar ao <label>.
+                    minlength="5": Exige no mínimo 5 caracteres.
+                    maxlength="20": Limita o campo a no máximo 20 caracteres.
+                    required: Torna o preenchimento obrigatório.
+                -->
+            </p>
+
+            <p>
+                <label for="iemail">E-mail</label> <!-- Rótulo para o campo de e-mail -->
+                <input type="email" name="email" id="email" autocomplete="email" required>
+                <!-- 
+                    type="email": Campo para entrada de e-mail (valida o formato automaticamente).
+                    name="email": Nome do campo, usado para identificar o dado no backend.
+                    id="email": Identificador único para associar ao <label>.
+                    autocomplete="email": Sugere o preenchimento automático com o e-mail do usuário.
+                    required: Torna o preenchimento obrigatório.
+                -->
+            </p>
+
+            <p>
+                <label for="itel">Telefone</label> <!-- Rótulo para o campo de telefone -->
+                <input type="tel" name="tel" id="itel" autocomplete="tel" pattern= "\(\d{2}\)\d{4,5}-\d{4}$" required
+                    placeholder="(xx)XXXX-XXXX">
+                <!-- 
+                    type="tel": Campo para entrada de número de telefone.
+                    name="tel": Nome do campo, usado para identificar o dado no backend.
+                    id="itel": Identificador único para associar ao <label>.
+                    autocomplete="tel": Sugere o preenchimento automático com o telefone do usuário.
+                    pattern="\(\d{2}\)\d{4,5}-\d{4}$": Define uma expressão regular (RegEx) para validar o formato do telefone.
+                    required: Torna o preenchimento obrigatório.
+                    placeholder="(xx)XXXX-XXXX": Exibe um texto de exemplo dentro do campo.
+                -->
+            </p>
+
+        </fieldset> 
+        <!-- Fim do grupo de campos -->
+        <!-- Estudar mais sobre RegEx - Expressoes regulares -->
+
+        <p>
+            <input type="submit" value="Enviar">
+            <!-- 
+                type="submit": Botão para enviar o formulário.
+                value="Enviar": Texto exibido no botão.
+            -->
+            <input type="reset" value="Limpar">
+            <!-- 
+                type="reset": Botão para limpar todos os campos do formulário.
+                value="Limpar": Texto exibido no botão.
+            -->
+        </p>
+
+    </form>
+    <!-- Fim do formulário -->
+
+</body>
+
+</html>

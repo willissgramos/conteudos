@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna o site responsivo -->
+    <title>Formulário com elementos number</title> <!-- Título da página -->
+</head>
+
+<body>
+    <!-- As vezes seu formulario pode nao rodar em alguns navegadores por conta da compatibilidade -->
+    <h1>Teste de Formulário</h1> <!-- Título principal da página -->
+
+    <!-- Início do formulário -->
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <!-- 
+            action="cadastro.php": Define o arquivo para onde os dados do formulário serão enviados.
+            method="get": Envia os dados anexados à URL (menos seguro, mas útil para buscas).
+            autocomplete="on": Ativa o preenchimento automático para os campos do formulário.
+        -->
+
+        <p>
+            <label for="inome">Nome</label> <!-- Rótulo para o campo de nome -->
+            <input type="text" name="nome" id="inome" required maxlength="30" placeholder="Nome completo" autocomplete="name">
+            <!-- 
+                type="text": Campo de texto para entrada de dados.
+                name="nome": Nome do campo, usado para identificar o dado no backend.
+                id="inome": Identificador único para associar ao <label>.
+                required: Torna o preenchimento obrigatório.
+                maxlength="30": Limita o campo a no máximo 30 caracteres.
+                placeholder="Nome completo": Exibe um texto de exemplo dentro do campo.
+                autocomplete="name": Sugere o preenchimento automático com o nome do usuário.
+            -->
+        </p>
+
+        <p>
+            <label for="imedia">Média</label> <!-- Rótulo para o campo de média -->
+            <input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" step="0.5" value="5" required>
+            <!-- 
+                type="number": Campo para entrada de números.
+                name="media": Nome do campo, usado para identificar o dado no backend.
+                id="imedia": Identificador único para associar ao <label>.
+                min="0": Define o valor mínimo permitido como 0.
+                max="10": Define o valor máximo permitido como 10.
+                step="0.5": Permite valores com incrementos de 0.5.
+                value="5": Define o valor padrão como 5.
+                placeholder="0 a 10": Exibe um texto de exemplo dentro do campo.
+                required: Torna o preenchimento obrigatório.
+            -->
+        </p>
+
+        <p>
+            <label for="imes">Periodo Letivo</label> <!-- Rótulo para o campo de período letivo -->
+            <input type="month" name="mes" id="imes" value="2025-04">
+            <!-- 
+                type="month": Campo para selecionar um mês e ano.
+                name="mes": Nome do campo, usado para identificar o dado no backend.
+                id="imes": Identificador único para associar ao <label>.
+                value="2025-04": Define o valor padrão como abril de 2025.
+            -->
+        </p>
+
+        <p>
+            <label for="idia">Dia da Prova</label> <!-- Rótulo para o campo de data -->
+            <input type="date" name="dia" id="idia" value="2025-04-27">
+            <!-- 
+                type="date": Campo para selecionar uma data.
+                name="dia": Nome do campo, usado para identificar o dado no backend.
+                id="idia": Identificador único para associar ao <label>.
+                value="2025-04-27": Define o valor padrão como 27 de abril de 2025.
+            -->
+        </p>
+
+        <p>
+            <label for="ihora">Horário da Prova</label> <!-- Rótulo para o campo de horário -->
+            <input type="time" name="hora" id="ihora">
+            <!-- 
+                type="time": Campo para selecionar um horário.
+                name="hora": Nome do campo, usado para identificar o dado no backend.
+                id="ihora": Identificador único para associar ao <label>.
+            -->
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <!-- 
+                type="submit": Botão para enviar o formulário.
+                value="Enviar": Texto exibido no botão.
+            -->
+            <input type="reset" value="Limpar">
+            <!-- 
+                type="reset": Botão para limpar todos os campos do formulário.
+                value="Limpar": Texto exibido no botão.
+            -->
+        </p>
+    </form>
+    <!-- Fim do formulário -->
+
+</body>
+
+</html>

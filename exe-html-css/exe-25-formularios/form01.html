@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna o site responsivo -->
+    <title>Formulário</title> <!-- Título da página -->
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif; /* Define a fonte padrão para o formulário */
+        }
+    </style>
+</head>
+<!-- As vezes seu formulario pode nao rodar em alguns navegadores por conta da compatibilidade -->
+<body>
+    <h1>Meu Primeiro Formulário</h1> <!-- Título principal da página -->
+
+    <!-- Início do formulário -->
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <!-- 
+            action="cadastro.php": Define o arquivo para onde os dados do formulário serão enviados.
+            method="post": Envia os dados de forma segura, sem exibi-los na URL.
+            autocomplete="on": Ativa o preenchimento automático para os campos do formulário.
+        -->
+
+        <p>
+            <label for="inome">Nome:</label> <!-- Caixa para o campo de nome, associado ao input com id="inome" -->
+            <input type="text" name="nome" id="inome" 
+            required minlength="5" autocomplete="username">
+            <!-- 
+                type="text": Campo de texto para o nome.
+                name="nome": Nome do campo, usado para identificar o dado no backend.
+                id="inome": Identificador único para associar ao <label>.
+                required: Torna o preenchimento obrigatório.
+                minlength="5": Exige no mínimo 5 caracteres.
+                autocomplete="username": Sugere o preenchimento automático com o nome de usuário.
+            -->
+        </p>
+
+        <p>
+            <label for="isobrenome">Sobrenome:</label> <!-- Caixa para o campo de sobrenome -->
+            <input type="text" name="sobrenome" id="isobrenome" 
+            required minlength="5">
+            <!-- 
+                type="text": Campo de texto para o sobrenome.
+                name="sobrenome": Nome do campo, usado para identificar o dado no backend.
+                id="isobrenome": Identificador único para associar ao <label>.
+                required: Torna o preenchimento obrigatório.
+                minlength="5": Exige no mínimo 5 caracteres.
+            -->
+        </p>
+
+        <p>
+            <label for="isen">Senha:</label> <!-- Caixa para o campo de senha -->
+            <input type="password" name="sen" id="isen" 
+            required maxlength="30" size="5" placeholder="Senha" 
+            autocomplete="current-password">
+            <!-- 
+                type="password": Campo para entrada de senha (os caracteres ficam ocultos).
+                name="sen": Nome do campo, usado para identificar o dado no backend.
+                id="isen": Identificador único para associar ao <label>.
+                required: Torna o preenchimento obrigatório.
+                maxlength="30": Limita o campo a no máximo 30 caracteres.
+                size="5": Define o tamanho visual do campo (em caracteres).
+                placeholder="Senha": Exibe um texto de exemplo dentro do campo.
+                autocomplete="current-password": Sugere o preenchimento automático com a senha atual.
+            -->
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar"> 
+            <!-- 
+                type="submit": Botão para enviar o formulário.
+                value="Enviar": Texto exibido no botão.
+            -->
+            <input type="reset" value="Limpar">
+            <!-- 
+                type="reset": Botão para limpar todos os campos do formulário.
+                value="Limpar": Texto exibido no botão.
+            -->
+        </p>
+    </form> <!-- Fim do formulário -->
+
+</body>
+
+</html>

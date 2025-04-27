@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna o site responsivo -->
+    <title>Checkbox e Radio Button</title> <!-- Título da página -->
+</head>
+
+<body>
+    <h1>Exemplo de Formulário</h1> <!-- Título principal da página -->
+
+    <!-- Início do formulário -->
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <!-- 
+            action="cadastro.php": Define o arquivo para onde os dados do formulário serão enviados.
+            method="get": Envia os dados anexados à URL (menos seguro, mas útil para buscas).
+            autocomplete="on": Ativa o preenchimento automático para os campos do formulário.
+        -->
+
+        <!-- Grupo de opções de seleção única (radio buttons) -->
+        <fieldset>
+            <legend>Sexo</legend> <!-- Título do grupo de opções -->
+            <!-- 
+                Em radio buttons, apenas uma opção pode ser selecionada por vez.
+                O atributo "name" deve ser o mesmo para todas as opções do grupo.
+                O atributo "id" deve ser único para associar ao <label>.
+            -->
+            <input type="radio" name="sexo" id="isxmas" checked value="M"> 
+            <label for="isxmas">Masculino</label><br>
+            <!-- 
+                type="radio": Cria um botão de seleção única.
+                name="sexo": Nome do grupo de opções, usado para identificar o dado no backend.
+                id="isxmas": Identificador único para associar ao <label>.
+                checked: Define esta opção como selecionada por padrão.
+                value="M": Valor enviado ao backend se esta opção for selecionada.
+            -->
+
+            <input type="radio" name="sexo" id="isxfem" value="F"> 
+            <label for="isxfem">Feminino</label>
+            <!-- 
+                type="radio": Cria outro botão de seleção única.
+                name="sexo": Nome do grupo de opções (mesmo nome do anterior para pertencer ao mesmo grupo).
+                id="isxfem": Identificador único para associar ao <label>.
+                value="F": Valor enviado ao backend se esta opção for selecionada.
+            -->
+        </fieldset>
+
+        <!-- Grupo de opções de seleção múltipla (checkboxes) -->
+        <fieldset>
+            <legend>Esportes favoritos</legend> <!-- Título do grupo de opções -->
+            <!-- 
+                Em checkboxes, várias opções podem ser selecionadas ao mesmo tempo.
+                Cada checkbox deve ter um "name" e "id" únicos.
+            -->
+            <input type="checkbox" name="esbas" id="iesbas"> 
+            <label for="iesbas">Basquete</label><br>
+            <!-- 
+                type="checkbox": Cria uma caixa de seleção.
+                name="esbas": Nome do campo, usado para identificar o dado no backend.
+                id="iesbas": Identificador único para associar ao <label>.
+            -->
+
+            <input type="checkbox" name="esfut" id="iesfut"> 
+            <label for="iesfut">Futebol</label><br>
+            <!-- 
+                type="checkbox": Cria outra caixa de seleção.
+                name="esfut": Nome do campo, usado para identificar o dado no backend.
+                id="iesfut": Identificador único para associar ao <label>.
+            -->
+
+            <input type="checkbox" name="esnat" id="iesnat"> 
+            <label for="iesnat">Natação</label><br>
+            <!-- 
+                type="checkbox": Cria outra caixa de seleção.
+                name="esnat": Nome do campo, usado para identificar o dado no backend.
+                id="iesnat": Identificador único para associar ao <label>.
+            -->
+
+            <input type="checkbox" name="esten" id="iesten"> 
+            <label for="iesten">Tênis</label><br>
+            <!-- 
+                type="checkbox": Cria outra caixa de seleção.
+                name="esten": Nome do campo, usado para identificar o dado no backend.
+                id="iesten": Identificador único para associar ao <label>.
+            -->
+        </fieldset>
+
+        <!-- Botões de envio e limpeza -->
+        <p>
+            <input type="submit" value="Enviar">
+            <!-- 
+                type="submit": Botão para enviar o formulário.
+                value="Enviar": Texto exibido no botão.
+            -->
+
+            <input type="reset" value="Limpar">
+            <!-- 
+                type="reset": Botão para limpar todos os campos do formulário.
+                value="Limpar": Texto exibido no botão.
+            -->
+        </p>
+    </form>
+    <!-- Fim do formulário -->
+</body>
+
+</html>
