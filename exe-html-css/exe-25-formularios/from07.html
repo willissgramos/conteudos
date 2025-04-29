@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna o site responsivo -->
+    <title>Elemento output em formulários</title> <!-- Título da página -->
+</head>
+
+<body>
+
+    <h1>Formulário de Soma</h1> <!-- Título do formulário de soma -->
+
+    <!-- Início do formulário de soma -->
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <!-- 
+            action="cadastro.php": Define o arquivo para onde os dados do formulário serão enviados.
+            method="get": Envia os dados anexados à URL.
+            autocomplete="on": Ativa o preenchimento automático para os campos do formulário.
+        -->
+
+        <p>
+            <label for="in1">Número 1:</label> <!-- Rótulo para o primeiro número -->
+            <input type="number" name="n1" id="in1" min="0" max="50" required
+                oninput="isoma.innerHTML=Number(in1.value)+ Number(in2.value)">
+            <!-- 
+                type="number": Campo para entrada de números.
+                name="n1": Nome do campo, usado para identificar o dado no backend.
+                id="in1": Identificador único para associar ao <label>.
+                min="0": Define o valor mínimo permitido como 0.
+                max="50": Define o valor máximo permitido como 50.
+                required: Torna o preenchimento obrigatório.
+                oninput: Atualiza o valor do elemento <output> com a soma dos dois números.
+            -->
+        </p>
+
+        <p>
+            <label for="in2">Número 2:</label> <!-- Rótulo para o segundo número -->
+            <input type="number" name="n2" id="in2" min="0" max="50" required
+                oninput="isoma.innerHTML=Number(in1.value)+ Number(in2.value)">
+            <!-- 
+                Mesmo funcionamento do campo anterior, mas para o segundo número.
+            -->
+        </p>
+
+        <p>
+            <label for="isoma">Soma:</label> <!-- Rótulo para o resultado da soma -->
+            <output name="soma" id="isoma">0</output>
+            <!-- 
+                output: Exibe o resultado da soma dos dois números.
+                name="soma": Nome do campo, usado para identificar o dado no backend.
+                id="isoma": Identificador único para associar ao <label>.
+                O valor inicial é 0.
+
+                O elemento `<output>` em HTML é usado para exibir o resultado de um cálculo ou uma ação realizada no formulário. é útil para criar formulários interativos e dinâmicos, permitindo que os usuários vejam resultados em tempo real antes de enviar os dados.
+            -->
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar"> <!-- Botão para enviar o formulário -->
+            <input type="reset" value="Limpar"> <!-- Botão para limpar os campos do formulário -->
+        </p>
+    </form>
+    <!-- Fim do formulário de soma -->
+
+    <h1>Formulário Range</h1> <!-- Título do formulário de controle deslizante -->
+
+    <!-- Início do formulário de controle deslizante -->
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <label for="inum">Número:</label> <!-- Rótulo para o controle deslizante -->
+            <input type="range" name="num" id="inum" min="0" max="10" value="5"
+                oninput="ival.innerHTML = Number(inum.value)">
+            <!-- 
+                type="range": Cria um controle deslizante para selecionar valores dentro de um intervalo.
+                name="num": Nome do campo, usado para identificar o dado no backend.
+                id="inum": Identificador único para associar ao <label>.
+                min="0": Define o valor mínimo permitido como 0.
+                max="10": Define o valor máximo permitido como 10.
+                value="5": Define o valor inicial como 5.
+                oninput: Atualiza o valor exibido no elemento <output> conforme o controle é ajustado.
+            -->
+            <output id="ival">5</output>
+            <!-- 
+                output: Exibe o valor atual do controle deslizante.
+                id="ival": Identificador único para associar ao script.
+                O valor inicial é 5.
+            -->
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar"> <!-- Botão para enviar o formulário -->
+            <input type="reset" value="Limpar"> <!-- Botão para limpar os campos do formulário -->
+        </p>
+    </form>
+    <!-- Fim do formulário de controle deslizante -->
+
+    <h1>Formulário Idade</h1> <!-- Título do formulário de cálculo de idade -->
+
+    <!-- Início do formulário de cálculo de idade -->
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <label for="iano">Em que ano você nasceu?</label> <!-- Rótulo para o campo de ano de nascimento -->
+            <input type="number" name="ano" id="iano" min="1900" max="2020" oninput="calcIdade()">
+            <!-- 
+                type="number": Campo para entrada de números.
+                name="ano": Nome do campo, usado para identificar o dado no backend.
+                id="iano": Identificador único para associar ao <label>.
+                min="1900": Define o valor mínimo permitido como 1900.
+                max="2020": Define o valor máximo permitido como 2020.
+                oninput: Chama a função calcIdade() para calcular a idade com base no ano atual.
+            -->
+        </p>
+
+        <p>
+            <label for="iidade">Sua idade é:</label> <!-- Rótulo para o campo de idade calculada -->
+            <output id="iidade">0</output>
+            <!-- 
+                output: Exibe a idade calculada.
+                id="iidade": Identificador único para associar ao script.
+                O valor inicial é 0.
+            -->
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar"> <!-- Botão para enviar o formulário -->
+            <input type="reset" value="Limpar"> <!-- Botão para limpar os campos do formulário -->
+        </p>
+    </form>
+    <!-- Fim do formulário de cálculo de idade -->
+
+    <script>
+        // Função para calcular a idade com base no ano atual e no ano de nascimento
+        function calcIdade() {
+            let atual = new Date().getFullYear(); // Obtém o ano atual
+            iidade.innerHTML = Number(atual) - Number(iano.value); // Calcula a idade e exibe no elemento <output>
+        }
+    </script>
+
+</body>
+
+</html>
