@@ -1,0 +1,3 @@
+Media Queries são regras do CSS que permitem aplicar estilos diferentes dependendo das características do dispositivo em que a página está sendo exibida, como largura da tela, altura, orientação (paisagem ou retrato), resolução, entre outros.
+
+Elas são muito usadas para criar layouts responsivos, ou seja, que se adaptam bem a diferentes tamanhos de tela (como celular, tablet e computador).
