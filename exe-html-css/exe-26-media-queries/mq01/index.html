@@ -1,0 +1,71 @@
+<!-- Declaração do tipo de documento HTML5 -->
+<!DOCTYPE html>
+<html lang="pt-br"> <!-- Define o idioma principal da página como português do Brasil -->
+
+<head>
+    <!-- Define a codificação de caracteres como UTF-8, permitindo o uso de caracteres especiais -->
+    <meta charset="UTF-8">
+    <!-- Configura a viewport para tornar a página responsiva, ajustando-se ao tamanho da tela do dispositivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define o título da página que será exibido na aba do navegador -->
+    <title>Primeiro Media Query</title>
+
+    <!-- Comentário explicando o conceito de Media Queries -->
+    <!-- Media Query = Media Type [Tipo de midia] + Media Features [características de midia]
+    
+     Media Queries são regras do CSS que permitem aplicar estilos diferentes dependendo das características do dispositivo em que a página está sendo exibida, como largura da tela, altura, orientação (paisagem ou retrato), resolução, entre outros.
+    Elas são muito usadas para criar layouts responsivos, ou seja, que se adaptam bem a diferentes tamanhos de tela (como celular, tablet e computador).
+     
+    Chamadas de Media Queries :
+    -->
+
+    <!-- Link para o arquivo CSS que será aplicado apenas em telas (media="screen") -->
+    <link rel="stylesheet" href="estilo/tela.css" media="screen">
+    
+    <!-- Link para o arquivo CSS que será aplicado apenas ao imprimir a página (media="print") -->
+    <link rel="stylesheet" href="estilo/impressora.css" media="print">
+</head>
+
+<body>
+    <!-- Cabeçalho da página -->
+    <header>
+        <!-- Título principal da página -->
+        <h1>Notícias</h1>
+        <!-- Menu de navegação -->
+        <menu>
+            <ul>
+                <!-- Itens do menu -->
+                <li>Esportes</li>
+                <li>Politica</li>
+                <li>Tecnologia</li>
+            </ul>
+        </menu>
+    </header>
+
+    <!-- Conteúdo principal da página -->
+    <main>
+        <!-- Artigo com informações -->
+        <article>
+            <!-- Subtítulo do artigo -->
+            <h2>Estou aprendendo a criar Media Queries</h2>
+
+            <!-- Parágrafos de texto fictício (placeholder) -->
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus
+                quas praesentium harum voluptas reprehenderit quisquam. Odit velit
+                rerum unde et repellendus voluptatem nesciunt cupiditate, debitis
+                quibusdam alias animi nobis distinctio?</p>
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus
+                quas praesentium harum voluptas reprehenderit quisquam. Odit velit
+                rerum unde et repellendus voluptatem nesciunt cupiditate, debitis
+                quibusdam alias animi nobis distinctio?</p>
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus
+                quas praesentium harum voluptas reprehenderit quisquam. Odit velit
+                rerum unde et repellendus voluptatem nesciunt cupiditate, debitis
+                quibusdam alias animi nobis distinctio?</p>
+        </article>
+    </main>
+</body>
+
+</html>
