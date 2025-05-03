@@ -2,22 +2,40 @@
 <html lang="pt-br">
 
 <head>
+    <!-- Define o conjunto de caracteres como UTF-8 -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu responsivo</title>
-    <link rel="stylesheet" href="estilos/style.css">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=special_character" />
-    
+    <!-- Configura o viewport para responsividade em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Define o título da página -->
+    <title>Menu responsivo</title>
+
+    <!-- Importa a fonte Material Symbols Outlined do Google Fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=special_character" />
+        
+    <!-- Importa o arquivo CSS first-mobile para estilização -->
+    <link rel="stylesheet" href="estilos/first-mobile.css">
+
+    <!-- Importa o arquivo CSS para estilização de demais telas -->
+    <link rel="stylesheet" href="estilos/media-query.css">
 </head>
 
-<body>
+<body onresize="mudouTamanho()">
+    <!-- Executa a função mudouTamanho() sempre que a janela for redimensionada -->
 
     <header>
+        <!-- Título do site -->
         <h1>Meu Site (God Of War)</h1>
-         <span id="menu" class="material-symbols-outlined" onclick="clickMenu()">special_character</span>
-        <menu id="itens" >
+
+        <!-- Ícone do menu que chama a função clickMenu ao ser clicado -->
+        <span id="menu" class="material-symbols-outlined" onclick="clickMenu()"> special_character</span>
+
+        <!-- Menu de navegação com opções -->
+        <menu id="itens">
             <ul>
+                <!-- Links de navegação -->
                 <li><a href="#">Opção 1</a></li>
                 <li><a href="#">Opção 2</a></li>
                 <li><a href="#">Opção 3</a></li>
@@ -26,32 +44,57 @@
             </ul>
         </menu>
     </header>
+
     <main>
         <article>
+            <!-- Título do artigo -->
             <h2>Testando Media Queries</h2><br>
 
+            <!-- Seções com informações sobre os jogos da série God of War -->
             <h3>God of War I: </h3>
-            <p> Kratos, um guerreiro espartano, serve aos deuses do Olimpo após fazer um pacto com Ares, o deus da guerra, para derrotar seus inimigos. No entanto, Ares o engana e o faz matar sua própria família, o que leva Kratos a buscar vingança. Auxiliado por Atena, ele parte em uma jornada para encontrar a Caixa de Pandora, a única forma de derrotar Ares. Após enfrentar inúmeros desafios, Kratos abre a caixa, adquire poder divino e mata Ares, tornando-se o novo deus da guerra.</p>
+            <p> Kratos, um guerreiro espartano, serve aos deuses do Olimpo após fazer um pacto com Ares, o deus da
+                guerra, para derrotar seus inimigos. No entanto, Ares o engana e o faz matar sua própria família, o que
+                leva Kratos a buscar vingança. Auxiliado por Atena, ele parte em uma jornada para encontrar a Caixa de
+                Pandora, a única forma de derrotar Ares. Após enfrentar inúmeros desafios, Kratos abre a caixa, adquire
+                poder divino e mata Ares, tornando-se o novo deus da guerra.</p>
 
             <h3>God of War II: </h3>
-            <p>Como novo deus da guerra, Kratos desafia os outros deuses e interfere nos assuntos humanos, o que causa a ira de Zeus. Traído e morto por ele, Kratos é salvo por Gaia, uma Titã, e decide se vingar dos deuses do Olimpo. Ele viaja no tempo com a ajuda das Irmãs do Destino e confronta Zeus, mas não consegue matá-lo. No fim, Kratos retorna ao passado, traz os Titãs ao presente e os lidera em um ataque ao Olimpo, iniciando uma guerra contra os deuses.</p>
+            <p>Como novo deus da guerra, Kratos desafia os outros deuses e interfere nos assuntos humanos, o que causa a
+                ira de Zeus. Traído e morto por ele, Kratos é salvo por Gaia, uma Titã, e decide se vingar dos deuses do
+                Olimpo. Ele viaja no tempo com a ajuda das Irmãs do Destino e confronta Zeus, mas não consegue matá-lo.
+                No fim, Kratos retorna ao passado, traz os Titãs ao presente e os lidera em um ataque ao Olimpo,
+                iniciando uma guerra contra os deuses.</p>
 
             <h3>God of War III: </h3>
-            <p>A guerra entre deuses e Titãs atinge seu clímax. Kratos busca matar Zeus e todos os deuses do Olimpo para se vingar. Durante sua jornada, ele enfrenta e mata várias divindades, o que desencadeia catástrofes no mundo. Após muitos confrontos, ele finalmente derrota Zeus, mas é confrontado por Atena, que revela querer usar o poder de Kratos para estabelecer uma nova ordem. Recusando-se a ser manipulado novamente, Kratos se sacrifica, libertando a esperança para a humanidade e encerrando seu ciclo de vingança.</p>
+            <p>A guerra entre deuses e Titãs atinge seu clímax. Kratos busca matar Zeus e todos os deuses do Olimpo para
+                se vingar. Durante sua jornada, ele enfrenta e mata várias divindades, o que desencadeia catástrofes no
+                mundo. Após muitos confrontos, ele finalmente derrota Zeus, mas é confrontado por Atena, que revela
+                querer usar o poder de Kratos para estabelecer uma nova ordem. Recusando-se a ser manipulado novamente,
+                Kratos se sacrifica, libertando a esperança para a humanidade e encerrando seu ciclo de vingança.</p>
         </article>
     </main>
+
     <script>
-        function clickMenu() {
-            if (itens.style.display == 'block') {
-                itens.style.display = 'none'
+        // Função que alterna a exibição do menu para telas grandes
+        function mudouTamanho() {
+            // Verifica se a largura da janela é maior ou igual a 768px
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block'; // Mostra o menu
+            } else {
+                itens.style.display = 'none'; // Esconde o menu
             }
-            else {
-                itens.style.display = 'block'
+        }
+            
+        // Função que alterna a exibição do menu
+        function clickMenu() {
+            // Verifica se o menu está visível
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none'; // Esconde o menu
+            } else {
+                itens.style.display = 'block'; // Mostra o menu
             }
         }
     </script>
-
-
 
 </body>
 

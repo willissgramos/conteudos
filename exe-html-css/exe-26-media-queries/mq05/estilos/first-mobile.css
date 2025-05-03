@@ -1,0 +1,94 @@
+@charset "UTF8";
+/* Define a codificação do arquivo como UTF-8 */
+
+/* Versão MOBILE FIRST */
+/* Indica que o design foi pensado para dispositivos móveis primeiro */
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    /* Define a fonte padrão para todos os elementos */
+
+    margin: 0px;
+    padding: 0px;
+    /* Remove margens e espaçamentos padrão de todos os elementos */
+}
+
+body, html {
+    background-color: rgb(148, 4, 4);
+    /* Define a cor de fundo para o corpo e o HTML */
+}
+
+header {
+    background-color: rgb(122, 5, 5);
+    /* Define a cor de fundo do cabeçalho */
+}
+
+header > h1 {
+    padding: 10px;
+    text-align: center;
+    /* Adiciona espaçamento interno e centraliza o texto do título no cabeçalho */
+}
+
+span#menu {
+    background-color: rgb(5, 5, 5);
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    /* Estiliza o botão de menu com cor de fundo, texto branco, centralização e comportamento de clique */
+}
+
+span#menu:hover {
+    background-color: rgb(1, 8, 112);
+    color: black;
+    /* Altera a cor de fundo e do texto ao passar o mouse sobre o botão de menu */
+}
+
+menu {
+    display: none;
+    /* Esconde o menu por padrão */
+}
+
+menu > ul {
+    list-style-type: none;
+    /* Remove os marcadores da lista */
+}
+
+menu > ul > li > a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    background-color: rgb(71, 3, 3);
+    color: rgb(255, 244, 244);
+    border-top: 2px solid rgb(7, 3, 3);
+    /* Estiliza os links do menu com espaçamento, centralização, cor de fundo e borda superior */
+}
+
+menu > ul > li > a:hover {
+    background-color: rgb(124, 4, 4);
+    /* Altera a cor de fundo dos links ao passar o mouse */
+}
+
+main {
+    width: 90vw;
+    background-color: rgb(204, 195, 195);
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    /* Define o estilo da área principal com largura, cor de fundo, margens e bordas arredondadas */
+}
+
+article > p {
+    padding-bottom: 20px;
+    /* Adiciona espaçamento inferior aos parágrafos dentro de um artigo */
+}
+
+article > p {
+    text-align: justify;
+    margin-bottom: 20px;
+    text-indent: 20px;
+    /* Justifica o texto, adiciona margem inferior e recuo na primeira linha dos parágrafos */
+}

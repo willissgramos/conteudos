@@ -1,0 +1,34 @@
+@charset "UTF8";
+/* Define a codificação do arquivo como UTF-8 */
+
+/* Versão TELAS MAIORES 
+   Typical Device Breakpoints:
+   Pequenas telas: até 600px
+   Celular: de 600px até 768px
+   Tablet: 768px até 992px
+   Desktop: 992px até 1200px
+   Grandes telas: acima de 1200px */
+
+/* Aplica estilos para telas com largura mínima de 768px */
+@media screen and (min-width: 768px) {
+
+    span#menu {
+        display: none;
+        /* Esconde o botão de menu em telas maiores */
+    }
+
+    menu {
+        display: block;
+        /* Exibe o menu completo em telas maiores */
+    }
+
+    menu > ul > li {
+        display: inline-block;
+        /* Exibe os itens do menu na mesma linha (horizontalmente) */
+    }
+
+    main {
+        width: 768px;
+        /* Define a largura fixa da área principal para 768px */
+    }
+}
