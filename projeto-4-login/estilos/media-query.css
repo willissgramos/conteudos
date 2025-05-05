@@ -1,48 +1,56 @@
 @charset "UTF8";
+/* Define a codificação do arquivo como UTF-8 */
 
+/* Estilos aplicados para telas com largura entre 768px e 992px */
 @media screen and (min-width: 768px) and (max-width: 992px) {
 
     body {
-        background-image: linear-gradient(to top, #49a09d,
-        #5f2c82);
-        }
+        background-image: linear-gradient(to top, #030179, #700000);
+        /* Define um gradiente de fundo para o corpo da página */
+    }
 
     section login {
-    width: 80vw;
+        width: 80vw;
+        /* Define a largura da seção de login como 80% da largura da janela de visualização */
     }
 
     section#login > div#imagem {
-    float: left;
-    width: 30%;
-    height: 100%;
+        float: left;
+        width: 30%;
+        height: 100%;
+        /* Posiciona a div de imagem à esquerda, com largura de 30% e altura de 100% */
     }
 
     section#login > div#formulario {
-    float: right;
-    width: 70%;
+        float: right;
+        width: 70%;
+        /* Posiciona a div de formulário à direita, com largura de 70% */
     }
-
 }
 
+/* Estilos aplicados para telas com largura mínima de 992px */
 @media screen and (min-width: 992px) {
 
     body {
-        background-image: linear-gradient(to top, #49a09d,
-        #5f2c82);
-        }
+        background-image: linear-gradient(to top, #030179, #700000);
+        /* Define o mesmo gradiente de fundo para telas maiores */
+    }
 
     section#login {
-    width: 950px;
+        width: 950px;
+        /* Define a largura fixa da seção de login como 950px */
     }
 
     section#login div#imagem {
-    float: left;
-    width: 50%;
-    height: 100%;
+        float: right;
+        width: 50%;
+        height: 100%;
+        /* Posiciona a div de imagem à esquerda, com largura de 50% e altura de 100% */
     }
 
     section#login > div#formulario {
-    float: right;
-    width: 50%;
+        float: left;
+        width: 50%;
+        /* Posiciona a div de formulário à direita, com largura de 50% */
     }
 }
