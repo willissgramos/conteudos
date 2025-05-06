@@ -78,7 +78,15 @@ section#login > div#imagem {
 section#login > div#formulario {
     display: block;
     /* Exibe o elemento como um bloco */
-
     padding: 10px;
     /* Adiciona espaçamento interno à div de formulário */
+}
+
+div#formulario > h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div#formulario > p {
+    font-size: 0.8em;
 }

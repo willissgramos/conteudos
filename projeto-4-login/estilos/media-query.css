@@ -1,4 +1,4 @@
-@charset "UTF8";
+@charset "UTF-8";
 /* Define a codificação do arquivo como UTF-8 */
 
 /* Estilos aplicados para telas com largura entre 768px e 992px */
@@ -9,7 +9,7 @@
         /* Define um gradiente de fundo para o corpo da página */
     }
 
-    section login {
+    section#login {
         width: 80vw;
         /* Define a largura da seção de login como 80% da largura da janela de visualização */
     }
@@ -41,7 +41,7 @@
         /* Define a largura fixa da seção de login como 950px */
     }
 
-    section#login div#imagem {
+    section#login > div#imagem {
         float: right;
         width: 50%;
         height: 100%;
@@ -53,4 +53,17 @@
         width: 50%;
         /* Posiciona a div de formulário à direita, com largura de 50% */
     }
+
+    div#formulario > h1 {
+        font-size: 2em;
+    }
+    
+    div#formulario > p {
+        font-size: 1.2em;
+    }
 }
+
+
+
+
+
