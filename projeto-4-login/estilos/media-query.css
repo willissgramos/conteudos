@@ -12,6 +12,7 @@
     section#login {
         width: 80vw;
         /* Define a largura da seção de login como 80% da largura da janela de visualização */
+        height: 280px;
     }
 
     section#login > div#imagem {
@@ -39,6 +40,7 @@
     section#login {
         width: 950px;
         /* Define a largura fixa da seção de login como 950px */
+        height: 350px;
     }
 
     section#login > div#imagem {
@@ -59,7 +61,8 @@
     }
     
     div#formulario > p {
-        font-size: 1.2em;
+        font-size: 1em;
+        margin: 20px 0px;
     }
 }
 
