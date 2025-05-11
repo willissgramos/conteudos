@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empacotamento e fluxo no Flexbox </title>
+    <!-- 
+    Propriedade : Flex-wrap (Empacotamento) - Define o comportamento do conteiner.
+
+    *o encolhimento e o tamaho dos blocos/itens vai depender do conteudo que existe nele
+
+    Valor Padrao é Nowrap = por padrao ele NÃO VAI QUEBRAR o conteudo dentro do conteiner vai se manter na sequencia espremido
+
+    Valor Wrap - apos diminuir o conteineir o ultimo item ira quebrar no sentido do cross axis, ex- se estiver ROW ele ira para baixo.
+
+    Valor wrap-reverse - apos diminuir o conteiner o ultimo item ira quebrar no sentido oposto ao cross axis, nesse  caso ele ira quebrar para cima .
+
+    *SEMPRE IRA SEGUIR NO SENTIDO DO CROSS AXIS 
+                    ou 
+    NO SENTIDO OPOSTO AO CROSS AXIS
+
+    Propriedade: Flex-Flow é a junção do flex-direction + flex-wrap declado em uma linha so 
+    EX - 
+         flex-direction: row;
+         flex-wrap: nowrap:
+        *flex-flow: row nowrap;
+
+    -->
+    <style>
+        div.conteiner {
+        background-color: lightsalmon;
+        display: flex;
+        flex-flow: row wrap;
+        }
+
+        div.item {
+        background-color: lightskyblue;
+        border: 1px solid black;
+        text-align: center; 
+        padding: 10px;
+        flex: auto;
+        }
+    </style>
+
+</head>
+<body>
+  
+
+<div>
+<div class="conteiner">
+<div class="item">Exemplo de boco A</div>
+<div class="item">Exemplo de boco B</div>
+<div class="item">Exemplo de boco C</div>
+<div class="item">Exemplo de boco D</div>
+<div class="item">Exemplo de boco E</div>
+<div class="item">Exemplo de boco F</div>
+<div class="item">Exemplo de boco G</div>
+</div>
+
+<h3>Normal- Ira sempre seguir o sentido do cross axis ou o oposto dele</h3><img src="../imagens/WRAP 1.png" alt=""> <br>
+<h3>flex-wrap : wrap (SENTIDO DO CROSS AXIS )</h3><img src="../imagens/WRAP2.png" alt=""> <br>
+<h3>flex-wrap : wrap-reverse (SENTIDO OPOSTO AO CROSS AXIS)</h3><img src="../imagens/WRAP3.png" alt="">
+
+</body>
+</html>
