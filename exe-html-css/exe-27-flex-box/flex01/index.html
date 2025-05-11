@@ -1,8 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
-<!-- Explicação Flexbox: 
-    Flexbox = 'Forma da agua' = Vai depender do recipiente (conteiner) pois ela se adapta.
-Flexbox é um modelo de layout do CSS que facilita o alinhamento e a distribuição de espaço entre itens dentro de um contêiner, mesmo quando o tamanho dos itens é desconhecido ou dinâmico, ´é ideal para layouts em uma única dimensão (linha ou coluna).
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com Flexbox</title>
+<!-- Explicação Flexbox E informações IMPORTANTES : 
+
+Flexbox = 'Forma da agua' = Vai depender do recipiente (conteiner) pois ela se adapta.
+    Flexbox é um modelo de layout do CSS que facilita o alinhamento e a distribuição de espaço entre itens dentro de um contêiner mesmo quando o tamanho dos itens é desconhecido ou dinâmico, ´é ideal para layouts em uma única dimensão (linha ou coluna).
 
 É utilizado quando você precisa:
     Alinhar itens horizontal ou verticalmente (como centralizar conteúdo).
@@ -12,15 +19,9 @@ Flexbox é um modelo de layout do CSS que facilita o alinhamento e a distribuiç
     Trabalhar com tamanhos dinâmicos de elementos.
         Exemplo comum: centralizar um botão no centro da tela.
 
-    *Caixa principal = Conteiner (é o elemento PAI-flex-conteiner) sera o UNICO que vai levar o display Flex nas suas configurações
-    *Conteudo dentro do conteiner = itens (FILHOS-flex-itens)
-
+    *Caixa principal = CONTEINER (é o elemento PAI-flex-conteiner) sera o UNICO que vai levar o display Flex nas suas configurações
+    *Conteudo dentro do conteiner = ITENS (FILHOS-flex-itens)
 -->
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primeiros passos com Flexbox</title>
-
     <style>
         div.conteiner {
 
@@ -50,6 +51,35 @@ Flexbox é um modelo de layout do CSS que facilita o alinhamento e a distribuiç
         <div class="item">G</div>
     </div>
 
+
+
+    <h1>Configurações Flexbox :</h1>
+
+<h3>Flex-direction: </h3>
+    <b>Row (padrão)-</b> itens da esquerda para direita 
+    <br><b>Row-Reverse-</b> itens da  esquerda para direita 
+    <br><b>Column-</b> de itens de cima para baixo 
+    <br><b>Column-reverse- </b>itens de baixo para cima
+<p>Quando voce escolhe a direção são criados dois eixos <b>(Principal e Tranversal)</b> e em cada eixo dois pontos iniciais e finais <b>(main-start/main-end e cross-start /cross-end )</b> :
+</p>
+
+<p><b>Eixos (axis):</b>
+    <br>Eixo Principal = main-axis
+    <br>Eixo Tranversal = cross-axis 
+
+        <br><br><b>Pontos dos Eixos inicial e final:</b>
+         <br>main-start/main-end
+          <br>cross-start /cross-end</p>
+<h1>Eixos e Pontos Flexbox</h1><img src="../imagens/1.png" alt=""> 
+
+<p><br><b>OBS: </b>Os Eixos e os pontos iniciais e finais serão diferentes de acordo com a Flex-direction começando e terminando em lados diferentes</p>
+
+<h1>Eixos nas diferentes flex direction </h1> <img src="../imagens/2.png" alt="">
+
+
+
+
 </body>
+
 
 </html>
