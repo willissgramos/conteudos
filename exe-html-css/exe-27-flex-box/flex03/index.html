@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento nos eixos Flexbox</title>
+
+
+     <style>
+        div.conteiner {
+
+            background-color: lightsalmon;
+            display: flex;
+        }
+
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+           
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <div class="conteiner">
+        <div class="item">Exemplo de boco A</div>
+        <div class="item">Exemplo de boco B</div>
+        <div class="item">Exemplo de boco C</div>
+        <div class="item">Exemplo de boco D</div>
+        <div class="item">Exemplo de boco E</div>
+        <div class="item">Exemplo de boco F</div>
+        <div class="item">Exemplo de boco G</div>
+    </div>
+
+    <br><br><img src="../imagens/flex-start.png"alt="">
+    <br><br><img src="../imagens/flex-end.png" alt="">
+    <br><br><img src="../imagens/center.png" alt="">
+    <br><br><img src="../imagens/between.png" alt="">
+    <br><br><img src="../imagens/evenly.png" alt="">
+    <br><br><img src="../imagens/around.png" alt="">
+    <br><br><img src="../imagens/todos.png" alt="">
+
+    <!-- 
+    *Propriedade: Justify-content
+        irá realizar o Alinhamento em relação ao main axis
+
+        *Valor: flex-start 
+            ira fazer com que o primeiro item do conteiner fique grudado no main start , e o espaço livre no conteiner  ira ficar ao lado oposto perto do main end
+
+        *Valor: flex-end
+            ira fazer com que o ultimo item do conteiner fique grudado no main end , e o espaço livre no conteiner  ficar ao lado oposto perto do main start
+
+        *Valor: center
+            ira calcular o centro do conteiner e colocar todos os itens no meio do main axis e os espacos em branco ira ficar distribuido de forma igual entre o main star e main end
+
+        *Valor: space-between
+            ira colocar o primeiro item colado no main star e o ultimo item colado no main end, todos os demais estarão no meio com espaçamento igual entre eles
+
+        *Valor: space-evenly
+            ira colocar espaçamento igual entre todos os itens inclusive perto das extremidades
+
+        *Valor: space-around
+            ira criar espaçamentos dentro do conteiner para cada item e centralizar cada item em seu espaçamento
+
+    Align-items:
+        irá realizar o Alinhamento em relação ao cros axis
+
+        *Valor: strech
+            é o valor padrão do align align-items se aumetar o cross axis ele ira esticar os elementos
+
+        *Valor: flex-start
+            ira grudar o item no inicio do cross start fzendo o espaço vazio ficar no oposto
+
+        *Valor: flex-end
+            ira grudar o item no final do cross end e o espaço em branco no cross start
+
+        *Valor: center
+            vai dividir o cross axis na metade e o espaço livre ira ficar nas duas extremidades e os item centralizados
+
+        Align-items nao tem opção de espaçamento
+    
+        
+
+-->
+</body>
+</html>
