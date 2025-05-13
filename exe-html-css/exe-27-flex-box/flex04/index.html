@@ -1,53 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<!-- Define o tipo de documento como HTML5 e o idioma como português do Brasil -->
 
 <head>
     <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura o viewport para responsividade em dispositivos móveis -->
+
     <title>Centralização absoluta</title>
-    <!--  centralização absoluta : 
-      justify-content e align-items : center -->
+    <!-- Define o título da página -->
+
+    <!-- Comentário explicativo sobre centralização absoluta -->
+    <!-- 
+        Centralização absoluta: Você deve configurar as propriedades abaixo com o valor "center":
+        - justify-content: center;
+        - align-items: center;
+    -->
 
     <style>
         * {
             margin: 0px;
             padding: 0px;
             box-sizing: border-box;
+            /* Remove margens e espaçamentos padrão e ajusta o box model */
         }
 
         body {
             background-color: lightsalmon;
+            /* Define a cor de fundo do corpo como salmão claro */
         }
 
         main {
-
             background-color: lightgreen;
+            /* Define a cor de fundo do elemento principal como verde claro */
+
             height: 100vh;
             width: 100vw;
+            /* Define a altura e largura do elemento principal como 100% da janela de visualização */
 
             display: flex;
+            /* Define o layout do elemento principal como flexbox */
+
             flex-flow: row nowrap;
+            /* Define a direção do layout como linha e impede a quebra de linha */
+
             justify-content: center;
+            /* Centraliza os itens horizontalmente */
+
             align-items: center;
+            /* Centraliza os itens verticalmente */
         }
 
         section {
             background-color: lightseagreen;
+            /* Define a cor de fundo da seção como verde-água claro */
+
             height: 200px;
             width: 200px;
+            /* Define a altura e largura da seção como 200px */
         }
     </style>
 </head>
+
 <body>
-
-        <main>
-            <section>
-                <h1>Tela de Login</h1>
-            </section>
-        </main>
-
-
-
+    <main>
+        <!-- Elemento principal que centraliza o conteúdo -->
+        <section>
+            <!-- Seção centralizada -->
+            <h1>Tela de Login</h1>
+            <!-- Título dentro da seção -->
+        </section>
+    </main>
 </body>
 
 </html>

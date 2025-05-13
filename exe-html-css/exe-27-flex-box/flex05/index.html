@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento de elementos empacotados </title>
+    <!-- 
+    IMPORTANTE para nao confundir :
+    JUSTIFY-CONTENT : serve para alinhar o conteúdo,alinhar os itens dentro do eixo principal.
+
+    ALIGN-ITEMS: serve para alinhar os conteúdos,itens dentro do eixo transversal.
+
+    ALIGN-CONTENT: serve para alinhar os elementos do eixo transversal quando eles estão empacotados.
+
+    *PROPRIEDADE: ALIGN-CONTENT
+        serve para alinhar os elementos do eixo transversal (Cross-axis) quando eles estão empacotados.
+    *Valores:
+         Stretch (Padrão ): vai pegar a todo o espaço disponvel dividir em partes iguais e esticar os itens usando todo o espaço do conteiner no caso do exemplo tem o cross axis amplificado .
+
+        Flex-start: Os elementos ficarão grudados ao cross-start o espaço vazio ficara grudado no cross end
+        
+        Flex-end : Os elementos ficarão grudados ao cross-end o espaço vazio ficara grudado no cross start
+
+        Center :Ira criar espaços em branco no cross start e cross-end deixando o conteudo alinhado no centro
+
+        Space-between : os primeiros elementos ficam perto do cross-start os ultimos elementosperto do cross-end e o espaço em branco fica livre para novos elementos e os demais ficam nas extremidades
+
+        Space-evenly : o mais simetrico, ele cria um espaçamento nas duas extremidades e no meio entre os elementos
+
+        Space-around :ele divide o eixo tranversal em partes iguais e dentro dessas areas centralizar os itens sem estica-los
+    -->
+<style>
+div.conteiner {
+  background-color: lightsalmon;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-evenly;
+  height: 400px;
+}
+
+div.item {
+  background-color: lightskyblue;
+  border: 1px solid black;
+  text-align: center;
+  padding: 40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+        <div class="item">M</div>
+    </div>
+
+    <h3>ALIGN-CONTENT: Stretch</h3><img src="../imagens/strech.png" alt="">
+    <h3>ALIGN-CONTENT: Flex-start: </h3><img src="../imagens/flexstart.png" alt="">
+    <h3>ALIGN-CONTENT: Flex-end :</h3><img src="../imagens/flexend.png" alt="">
+    <h3>ALIGN-CONTENT: Center:</h3><img src="../imagens/flexcenter.png" alt="">
+    <h3>ALIGN-CONTENT: Space-between:</h3><img src="../imagens/spacebetween.png" alt="">
+    <h3>ALIGN-CONTENT:Space-evenly :</h3><img src="../imagens/alignevely.png" alt="">
+    <h3>ALIGN-CONTENT: Space-around :</h3><img src="../imagens/alignaround.png" alt="">
+
+</body>
+
+</html>
