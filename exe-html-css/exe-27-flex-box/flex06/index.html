@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna o site responsivo -->
+    <title>Anatomia dos itens Flexbox</title> <!-- Título da página -->
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+}
+
+        /* Estilo para o primeiro contêiner flex */
+        div.conteiner {
+            background-color: lightsalmon; /* Cor de fundo do contêiner */
+            display: flex; /* Define o contêiner como flexbox */
+            flex-flow: row wrap; /* Define o layout em linha e permite quebra de linha */
+        }
+
+        /* Estilo para os itens dentro do contêiner */
+        div.item {
+            background-color: lightskyblue; /* Cor de fundo dos itens */
+            border: 1px solid black; /* Borda preta ao redor dos itens */
+            text-align: center; /* Centraliza o texto dentro dos itens */
+            padding: 20px; /* Espaçamento interno dos itens */
+        }
+
+        /* Define a ordem dos itens no contêiner flex */
+        div#i1 {
+            order: 0; /* Ordem padrão */
+        }
+
+        div#i2 {
+            order: -2; /* Este item será exibido antes dos itens com ordem 0 */
+        }
+
+        div#i3 {
+            order: 4; /* Este item será exibido após os itens com ordem menor */
+        }
+
+        div#i4 {
+            order: 8; /* Este item será exibido ainda mais à frente */
+        }
+
+        div#i5 {
+            order: 2; /* Este item será exibido após os itens com ordem menor */
+        }
+
+        div#i6 {
+            order: 0; /* Ordem padrão */
+        }
+
+        div#i7 {
+            order: -4; /* Este item será exibido antes de todos os outros */
+        }
+
+        /* Estilo para o segundo contêiner flex */
+        div.conteiner2 {
+            background-color: lightsalmon; /* Cor de fundo do contêiner */
+            display: flex; /* Define o contêiner como flexbox */
+            flex-flow: row wrap; /* Define o layout em linha e permite quebra de linha */
+            align-items: flex-start; /* Alinha os itens no início do eixo transversal */
+            height: 400px; /* Altura do contêiner */
+        }
+
+        /* Estilo para os itens do segundo contêiner */
+        div.item2 {
+            background-color: lightskyblue; /* Cor de fundo dos itens */
+            border: 1px solid black; /* Borda preta ao redor dos itens */
+            text-align: center; /* Centraliza o texto dentro dos itens */
+            padding: 20px; /* Espaçamento interno dos itens */
+        }
+
+        /* Define o alinhamento individual dos itens no eixo transversal */
+        div#ia {
+            align-self: center; /* Alinha este item ao centro do eixo transversal */
+        }
+
+        div#ib {
+            align-self: auto; /* Herda o alinhamento do contêiner pai */
+        }
+
+        div#ic {
+            align-self: flex-end; /* Alinha este item ao final do eixo transversal */
+        }
+
+        div#id {
+            align-self: stretch; /* Estica este item para preencher o eixo transversal */
+        }
+
+        div#ie {
+            align-self: center; /* Alinha este item ao centro do eixo transversal */
+        }
+
+        div#if {
+            align-self: flex-end; /* Alinha este item ao final do eixo transversal */
+        }
+
+        div#ig {
+            align-self: stretch; /* Estica este item para preencher o eixo transversal */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Anatomia dos itens Flexbox</h1> <!-- Título principal da página -->
+    <p>OBS: Quando cria contêiner flex box a parte de fora é flex mas a parte de dentro não, os itens não são flex</p>
+   
+    <p><b>*Propriedade: ORDER </b>- por padrão todo item dentro do contêiner tem order 0, se você quiser mudar a ordem
+        dos elementos você pode aplicar a propriedade com valores diferentes, sendo <b>decrescentes</b>, logo números
+        negativos vêm primeiro depois números positivos</p>
+    
+    <!-- Primeiro contêiner flex com itens -->
+    <div class="conteiner">
+        <div class="item" id="i1">A</div> <!-- Ordem 0 -->
+        <div class="item" id="i2">B</div> <!-- Ordem -2 -->
+        <div class="item" id="i3">C</div> <!-- Ordem 4 -->
+        <div class="item" id="i4">D</div> <!-- Ordem 8 -->
+        <div class="item" id="i5">E</div> <!-- Ordem 2 -->
+        <div class="item" id="i6">F</div> <!-- Ordem 0 -->
+        <div class="item" id="i7">G</div> <!-- Ordem -4 -->
+    </div>
+    <br><img src="../flex06/order.png" alt=""> <!-- Imagem ilustrativa para a propriedade order -->
+
+    <br>
+    <p><b>*Propriedade: Align-self </b>- Ela se aplica a cada um dos itens, cada item pode ter um alinhamento diferente se você quiser, ele se aplica aos itens e vai funcionar no cross axis (eixo transversal), o valor <b>auto</b> vai herdar a característica de alinhamento vertical do PAI</p>
+
+    <!-- Segundo contêiner flex com itens -->
+    <div class="conteiner2">
+        <div class="item2" id="ia">A</div> <!-- Alinhado ao centro -->
+        <div class="item2" id="ib">B</div> <!-- Herda alinhamento do pai -->
+        <div class="item2" id="ic">C</div> <!-- Alinhado ao final -->
+        <div class="item2" id="id">D</div> <!-- Esticado -->
+        <div class="item2" id="ie">E</div> <!-- Alinhado ao centro -->
+        <div class="item2" id="if">F</div> <!-- Alinhado ao final -->
+        <div class="item2" id="ig">G</div> <!-- Esticado -->
+    </div>
+    
+    <br><br><img src="../flex06/alignself.png" alt=""> <!-- Imagem ilustrativa para a propriedade align-self -->
+</body>
+
+</html>

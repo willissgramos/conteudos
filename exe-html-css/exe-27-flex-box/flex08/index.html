@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle do tamanho de itens flexíveis</title>
+    <style>
+        /* Define que as imagens terão largura máxima de 100% do contêiner, 
+           altura ajustada proporcionalmente e serão exibidas como blocos */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Define a fonte dos parágrafos como Arial (ou similar), 
+           tamanho de fonte responsivo, espaçamento entre linhas, 
+           margem e largura máxima */
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: clamp(1rem, 2.5vw, 1.25rem); /* Tamanho da fonte ajusta-se ao tamanho da tela */
+            line-height: 1.6; /* Espaçamento entre linhas */
+            margin: 1rem; /* Margem ao redor do parágrafo */
+            max-width: 100%; /* Largura máxima do parágrafo */
+        }
+
+        /* Define o estilo do contêiner flexível */
+        div.conteiner {
+            background-color: lightsalmon; /* Cor de fundo do contêiner */
+            display: flex; /* Ativa o layout flexbox */
+            flex-flow: row nowrap; /* Define a direção dos itens como linha e impede quebra de linha */
+        }
+
+        /* Define o estilo básico dos itens dentro do contêiner */
+        div.item {
+            background-color: lightskyblue; /* Cor de fundo dos itens */
+            border: 1px solid black; /* Borda preta ao redor dos itens */
+            text-align: center; /* Centraliza o texto dentro dos itens */
+            flex-basis: 200px; /* Define o tamanho base inicial de cada item */
+        }
+
+        /* Estilo específico para o item com ID "cxA" */
+        div#cxA {
+            flex-shrink: 1; /* Permite que o item encolha se necessário */
+            flex-grow: 0; /* Não permite que o item cresça */
+        }
+
+        /* Estilo específico para o item com ID "cxB" */
+        div#cxB {
+            flex-shrink: 1; /* Permite que o item encolha se necessário */
+            flex-grow: 1; /* Permite que o item cresça proporcionalmente */
+        }
+
+        /* Estilo específico para o item com ID "cxC" */
+        div#cxC {
+            flex-shrink: 1; /* Permite que o item encolha se necessário */
+            flex-grow: 8; /* Permite que o item cresça muito mais que os outros */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="conteiner">
+        <div class="item" id="cxA">A</div>
+        <div class="item" id="cxB">B</div>
+        <div class="item" id="cxC">C</div>
+    </div>
+    <h1>Controle do tamanho de itens flexíveis</h1>
+    <p><b>Propriedade: Flex-shrink (Encolher) e flex-grow (Crescer) (APENAS NOS ITENS)</b>- <br>Por padrão os valores
+        são Flex-shrink = 1 e flex-grow =0 <br> Qualquer valor DIFERENTE de 0 e positivo significa que PODE encolher
+        (Flex-shrink) <br> Todos os itens com valor 0 significa que NÃO PODE CRESCER (flex-grow) </p>
+
+
+    <img src="../flex08/flex.png" alt="">
+    <br>
+    <p>Exemplo Flex-shrink Valor 0</p><img src="../flex08/flex0.png" alt="">
+    <br>
+
+    <br>
+    <p>Exemplo: Conteiner com menos de 450px, os elementos encolheram para poder caber isso se da pelo Flex-shrink ter
+        valor igual a 1 pois por padrao pode encolher</p><img src="../flex08/flex2.png" alt="">
+
+
+    <br>
+    <p>Exemplo: Conteiner com mais de 450px, nao aconteceu nada com os elementos pois o flex-grow esta com valor igual a
+        0 por padrao não pode crescer</p>
+    <img src="../flex08/flex3.png" alt="">
+    <br>
+    <p>Exemplo flex-grow Valor 1</p> <img src="../flex08/flex33.png" alt="">
+    <br>
+
+    <h1>EXEMPLOS DIVERSOS:</h1>
+    <img src="../flex08/ex1.png" alt=""> <br> <br>
+    <img src="../flex08/ex2.png" alt=""> <br> <br>
+    <img src="../flex08/ex3.png" alt=""> <br> <br>
+    <img src="../flex08/ex4.png" alt=""> <br> <br>
+    <img src="../flex08/ex5.png" alt=""> <br> <br>
+    <img src="../flex08/ex6.png" alt=""> <br> <br>
+    <img src="../flex08/ex7.png" alt=""> <br> <br>
+    <img src="../flex08/ex8.png" alt=""> <br> <br>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedade flex-basis</title>
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+
+        }
+
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: clamp(1rem, 2.5vw, 1.25rem); /* tamanho da fonte responsivo */
+            line-height: 1.6;
+            margin: 1rem;
+            max-width: 100%;
+        }
+
+        div.conteiner {
+            background-color: lightsalmon;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <p><b>Propriedade: flex-basis</b> -Possui o valor <b>AUTO</b> como padrão, significa que o tamanho do elemento no
+        eixo principal é ditada pelo tamanho do conteudo, se o coneudo for muito grande vai aumentar a largura, </p>
+    <img src="../flex07/basis.png" alt="">
+    <br>
+    <p>se você dar um valor para o flex basis todos os itens ficarao com o mesmo tamanho independente do conteudo
+        dentro, esse tamanho ira se manter desde que o conteiner tenha um tamanho igual ou maior caso contrario ira
+        quebrar</p>
+    <img src="../flex07/basis2.png" alt="">
+    <br>
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">Outro conteudo</div>
+        <div class="item">C</div>
+        <div class="item">Conteudo um pouco maior</div>
+        <div class="item">E</div>
+        <div class="item">Conteudo maior ainda, que vai ocupar mais espaço</div>
+        <div class="item">G</div>
+    </div>
+</body>
+
+</html>
