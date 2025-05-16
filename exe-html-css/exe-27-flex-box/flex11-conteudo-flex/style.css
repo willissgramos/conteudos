@@ -1,0 +1,80 @@
+@charset "UTF-8"; /* Define o conjunto de caracteres como UTF-8 */
+
+/* Zera as margens e paddings de todos os elementos e inclui borda no cálculo do tamanho */
+* {
+    margin:0px; /* Remove a margem padrão */
+    padding: 0px; /* Remove o padding padrão */
+    box-sizing: border-box; /* Inclui padding e borda no tamanho total */
+}
+
+/* Define a fonte, tamanho e altura de linha do corpo da página */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Define a família da fonte */
+    font-size: 1em; /* Define o tamanho da fonte */
+    line-height: 1.5em; /* Define a altura da linha */
+}
+
+/* Estiliza parágrafos */
+p {
+    margin-bottom: 10px; /* Espaço abaixo do parágrafo */
+    text-align: justify; /* Alinha o texto justificado */
+}
+
+/* Estiliza títulos h1 e h2 */
+h1,h2 {
+    margin-bottom:20px; /* Espaço abaixo dos títulos */
+    line-height: 1.2em; /* Altura da linha dos títulos */
+    text-align: left; /* Alinha os títulos à esquerda */
+}
+
+/* Espaçamento interno para header e section.normal */
+header, section.normal{
+    padding: 20px; /* Espaçamento interno de 20px */
+}
+
+/* Estilização da seção flexível */
+section.flex-content {
+    padding: 20px; /* Espaçamento interno de 20px */
+    background-color: rgb(156, 156, 156); /* Cor de fundo cinza */
+    display: flex; /* Ativa o Flexbox */
+    flex-flow: column nowrap; /* Direção em coluna, sem quebra de linha */
+}
+
+/* Artigo com texto e mídia lado a lado */
+article.text-media {
+    display: flex; /* Ativa o Flexbox */
+    flex-flow: row wrap; /* Direção em linha, permite quebra de linha */
+    justify-content: space-between; /* Espaço igual entre os itens */
+}
+
+/* Artigo com mídia e texto, invertendo a ordem na quebra de linha */
+article.media-text {
+    display: flex; /* Ativa o Flexbox */
+    flex-flow: row wrap-reverse; /* Direção em linha, quebra de linha invertida */
+    justify-content: space-between; /* Espaço igual entre os itens */
+}
+
+/* Div de texto dentro do artigo, flexível */
+article > div.text {
+    flex: 1 1 500px; /* Cresce, encolhe, tamanho base de 500px */
+}
+
+/* Div de mídia dentro do artigo, flexível */
+article > div.media {
+    flex: 1 0 400px; /* Cresce, não encolhe, tamanho base de 400px */
+}
+
+/* Imagem dentro da div.media */
+div.media >img {
+    display: block; /* Exibe como bloco */
+    margin: auto; /* Centraliza horizontalmente */
+    width: 300px; /* Largura fixa de 300px */
+    padding: 10px; /* Espaçamento interno de 10px */
+}
+
+/* Iframe dentro da div.media */
+div.media > iframe{
+    display: block; /* Exibe como bloco */
+    margin: auto; /* Centraliza horizontalmente */
+    width: 90%; /* Largura de 90% do elemento pai */
+}
