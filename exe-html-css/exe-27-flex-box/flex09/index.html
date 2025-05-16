@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A propriedade flex</title>
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            line-height: 1.6;
+            margin: 1rem;
+            max-width: 100%;
+        }
+
+        div.conteiner {
+            background-color: lightsalmon;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        div#cxA {
+            /*flex-shrink: 0;
+            flex-grow: 1;
+            flex-basis: 200px;
+            A declaração abaixo é a mesma da de cima porem simplificada */
+            flex: 1 0 200px;
+        }
+
+        div#cxB {
+            flex-shrink: 1;
+            flex-grow: 1;
+            flex-basis: 150px;
+        }
+
+        div#cxC {
+            flex-shrink: 8;
+            flex-grow: 1;
+            flex-basis: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="conteiner">
+        <div class="item" id="cxA">A</div>
+        <div class="item" id="cxB">B</div>
+        <div class="item" id="cxC">C</div>
+    </div>
+
+
+    <h1>A propriedade flex</h1>
+    <p>Essa propriedade permite você declarar o basis, grow e shrink em uma unica linha individual sendo na seguinte
+        ordem de declaração de valores : <b>grow/shrink/basis</b></p>
+    <br> <img src="../flex09/flex.png" alt="">
+
+    <h1>Outras configuraçoes flex</h1>
+    <br> <img src="../flex09/flex2.png" alt="">
+
+
+
+
+
+
+
+</body>
+
+</html>
