@@ -1,13 +1,13 @@
-@charset "UTF-8";
+@charset "UTF-8"; /* Define o conjunto de caracteres como UTF-8 */
 
 header, header > nav {
-    flex-flow: column nowrap;
+    flex-flow: column nowrap; /* Organiza os itens em coluna, sem quebra de linha */
 }
 
 header > h1 {
-    flex-basis: 50px;
+    flex-basis: 50px; /* Define a altura base do h1 como 50px */
 }
 
 header > nav > a {
-    width: 90vw;
+    width: 90vw; /* Define a largura dos links como 90% da largura da tela */
 }
