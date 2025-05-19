@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedades de container para Grids (parte 2)</title>
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            line-height: 1.6;
+            margin: 1rem;
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Propriedades de conteiner para Grid (Pt2)</h2>
+    <img src="../grid-2.1-propriedades-pt2/1.png" alt="">
+
+    <h2>Align-item → eixo vertical (Cima p/ baixo) </h2>
+
+    <p>Alinha cada item do grid na vertical (dentro de sua célula) <b>align-items: start | end | center | stretch;</b>
+        <br><br><b>start:</b> alinha os itens ao topo.
+        <img src="../grid-2.1-propriedades-pt2/start.png" alt="">
+
+        <br><b>end:</b> alinha os itens ao fundo.
+        <img src="../grid-2.1-propriedades-pt2/end.png" alt="">
+
+        <br><b>center:</b> centraliza os itens verticalmente.
+        <img src="../grid-2.1-propriedades-pt2/center.png" alt="">
+
+        <br><b>stretch:</b> estica os itens para ocupar toda a altura da célula ou container <b>(comportamento
+            padrão)</b>.
+        <img src="../grid-2.1-propriedades-pt2/strech.png" alt="">
+    </p>
+
+
+    <h2>Justify-item → eixo horizontal: (esqueda p/ direita)</h2>
+
+    <p>Alinha cada item do grid na horizontal (dentro de sua célula) <b>justify-items: start | end | center | stretch;</b>
+    <br>
+        <br><b>start:</b> alinha os itens à esquerda.
+        <img src="../grid-2.1-propriedades-pt2/justistart.png" alt="">
+
+        <br><b>end:</b> alinha os itens à direita.
+        <img src="../grid-2.1-propriedades-pt2/justiend.png" alt="">
+
+        <br><b>center:</b> centraliza os itens horizontalmente.
+        <img src="../grid-2.1-propriedades-pt2/justicenter.png" alt="">
+
+        <br><b>stretch:</b> estica os itens para preencher todo o espaço disponível <b>(valor padrão)</b>.
+        <img src="../grid-2.1-propriedades-pt2/justistrech.png" alt="">
+     </p>
+   
+
+    <h2>Align-content</h2>
+
+    <p>Alinha o grid inteiro na vertical (Cima p/ baixo) dentro do container. <b>align-content: start | end | center | space-between |space-around | space-evenly;</b>
+    
+    <br><b>start: (valor padrão)</b> alinha os itens em cima <b>(Valor Padrão)</b>.
+        <img src="../grid-2.1-propriedades-pt2/alignstart.png" alt="">
+
+        <br><b>end:</b> alinha os itenspara baixo final do conteiner.
+        <img src="../grid-2.1-propriedades-pt2/alignend.png" alt="">
+
+        <br><b>center:</b> centraliza os itens horizontalmente.
+        <img src="../grid-2.1-propriedades-pt2/aligncenter.png" alt="">
+
+         <br><b>space-between:</b> itens ficam com espaço igual entre eles, sem espaço nas bordas.
+         <img src="../grid-2.1-propriedades-pt2/alignbetwen.png" alt="">
+
+         <br><b>space-evenly: </b>espaço igual entre todos os itens e as bordas.
+         <img src="../grid-2.1-propriedades-pt2/alignevenly.png" alt="">
+
+         <br><b>space-around:</b> espaço igual nos dois lados de cada item.
+         <img src="../grid-2.1-propriedades-pt2/alignaround.png" alt="">
+
+         <br><b>stretch:</b> estica os itens para preencher todo o espaço disponível <b>(valor padrão)</b>.
+         <img src="../grid-2.1-propriedades-pt2/alignstrech.png" alt="">
+    </p>
+    <h2>Justify-content</h2>
+
+    <p>Alinha o grid inteiro na horizontal (esqueda p/ direita) dentro do container. <b>justify-content: start | end | center | space-between | space-around | space-evenly;</b>
+
+    <br><b>start:(valor padrão)</b> alinha os itens à esquerda.
+        <img src="../grid-2.1-propriedades-pt2/justicontentstart.png" alt="">
+
+        <br><b>end:</b> alinha os itens à direita.
+        <img src="../grid-2.1-propriedades-pt2/contentend.png" alt="">
+
+        <br><b>center:</b> centraliza os itens horizontalmente.
+        <img src="../grid-2.1-propriedades-pt2/contentcenter.png" alt="">
+
+         <br><b>space-between:</b> itens ficam com espaço igual entre eles, sem espaço nas bordas.
+         <img src="../grid-2.1-propriedades-pt2/contentbetween.png" alt="">
+
+         <br><b>space-evenly: </b>espaço igual entre todos os itens e as bordas.
+         <img src="../grid-2.1-propriedades-pt2/contentevenly.png" alt="">
+
+         <br><b>space-around:</b> espaço igual nos dois lados de cada item.
+         <img src="../grid-2.1-propriedades-pt2/contentaroud.png" alt="">
+
+        <br><b>stretch:</b> estica os itens para preencher todo o espaço disponível <b></b>.
+        <img src="../grid-2.1-propriedades-pt2/contentstrech.png" alt="">
+    
+    </p>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout na prática</title>
+    <style>
+    img {
+    max-width: 100%; /* Garante que a imagem nunca ultrapasse a largura do elemento pai */
+    height: auto; /* Mantém a proporção da imagem ao redimensionar */
+    display: block; /* Remove o espaço embaixo da imagem (comportamento inline padrão) */
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif; /* Define a fonte do texto */
+    font-size: clamp(1rem, 2.5vw, 1.25rem); /* Tamanho do texto responsivo: mínimo 1rem, máximo 1.25rem, ajustando conforme a largura da tela */
+    line-height: 1.6; /* Espaçamento entre linhas para melhor leitura */
+    margin: 1rem; /* Espaçamento externo ao redor do parágrafo */
+    max-width: 100%; /* Garante que o parágrafo não ultrapasse o elemento pai */
+}
+
+div.container {
+    border: 3px solid blue; /* Borda azul de 3px ao redor do container */
+    height: 250px; /* Altura fixa do container */
+    display: grid; /* Ativa o layout de grid CSS */
+    grid-template-columns: auto auto auto; /* Cria 3 colunas de largura automática */
+    grid-template-rows: auto auto auto; /* Cria 3 linhas de altura automática */
+    gap: 5px; /* Espaçamento de 5px entre linhas e colunas do grid */
+}
+
+div.item {
+    border: 3px solid red; /* Borda vermelha de 3px ao redor de cada item */
+    padding: 5px; /* Espaçamento interno de 5px dentro de cada item */
+}
+    
+</style>
+</head>
+<body> <!--Lembrado que no html PODE mais de um elemento com a mesma CLASSE ja com o mesmo ID nao-->
+    <div class="container">  <!-- Se voce colocar div.container ja cria a div com a classe  -->
+        <div class="item">A</div> <!--ao lado foi criado Div.item*7 .serve para criar ja com class item e o * multiplica as linhas -->
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div> <!--Função inspecionar do chome deixa mais facil de entender o grid -->
+
+
+
+
+
+</body>
+</html>

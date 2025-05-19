@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O que é Grid Layout?</title>
+<style>
+    img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            line-height: 1.6;
+            margin: 1rem;
+            max-width: 100%;
+        }
+</style>
+</head>
+<body>
+    <h1>O que é Grid Layout?</h1>
+    <p>Grid Layout é um sistema de layout em CSS que permite criar interfaces de usuario organizadas em linhas e colunas. Ele oferece uma maneira poderosa e flexível de distribuir elementos em uma página, especialmente útil para criar layouts complexos e responsivos para diversos tios de tela .
+
+<br><br><b>Características principais:</b>
+Organização em linhas e colunas: Permite posicionar elementos facilmente em grades (grids).
+<br><br>Áreas nomeadas: Você pode nomear regiões do layout e posicionar os elementos com base nesses nomes.
+<br><br>Responsividade: Facilita criar layouts que se adaptam a diferentes tamanhos de tela.
+<br><br>Controle preciso: Permite controlar o tamanho, alinhamento e espaçamento dos elementos.
+
+<br><br>Aqui estão as principais diferenças entre <b>Grid Layout e Flexbox</b>:
+
+<br><br>📌 1. Direção do layout
+Grid: Trabalha em duas dimensões – linhas e colunas.
+
+Flexbox: Trabalha em uma dimensão por vez – linha ou coluna.
+
+<br><br>📌 2. Posicionamento dos itens
+Grid: Você pode posicionar os itens em qualquer lugar da grade, usando coordenadas (linha/coluna).
+
+Flexbox: Os itens são organizados automaticamente conforme a ordem do HTML.
+
+<br><br>📌 3. Complexidade do layout
+Grid: Ideal para layouts completos e complexos, como páginas inteiras.
+
+Flexbox: Melhor para alinhamentos simples, como menus, botões, ou listas horizontais/verticais.
+
+<br><br>📌 4. Controle do espaço
+Grid: Mais controle com fr, auto, minmax, e áreas nomeadas.
+
+Flexbox: Controle mais limitado, mas ótimo para distribuir espaço entre poucos itens.
+
+<br><br>📌 5. Responsividade
+Grid: Permite adaptar o layout com facilidade em diferentes tamanhos de tela.
+
+Flexbox: Também é responsivo, mas exige mais cuidado com wrap e media queries.
+
+<br><br>✅ Resumo
+Use Grid quando quiser organizar itens em linhas e colunas com controle total.
+
+Use Flexbox para alinhamento simples e linear de elementos.</p>
+<h2>Exempos sites com Grid Layout e sem (modelos antigos)</h2>
+<br><img src="../grid0/1.png" alt="">
+<br><br><img src="../grid0/2.png" alt="">
+<br><br><img src="../grid0/3.png" alt="">
+<br><br><img src="../grid0/4.png" alt="">
+<h1>Anatomia de um Grid</h1>
+<p><b>Grid Container</b>
+Elemento com display: grid ou display: inline-grid. É o contêiner que define o grid.
+
+<br><b>Grid Items</b>
+São os filhos diretos do grid container. Eles são posicionados dentro do grid.</p><img src="../grid0/5.png" alt="">
+<p><b>Grid Tracks</b>
+Espaços entre duas linhas:
+<br><b>Grid Rows</b> (faixas horizontais)
+<br><b>Grid Columns</b> (faixas verticais)</p><img src="../grid0/6.png" alt="">
+<p><b>Grid Lines</b>
+Linhas verticais e horizontais que dividem o grid em células. Podem ser numeradas ou nomeadas para posicionamento.</p><img src="../grid0/7.png" alt="">
+<br><br><img src="../grid0/8.png" alt="">
+<br><br><img src="../grid0/9.png" alt="">
+<p><b>Grid Areas</b>
+Uma ou mais itens agrupados formando uma área nomeada, usada para posicionar elementos.</p><img src="../grid0/10.png" alt="">
+<p><b>Gaps (ou Gutters)</b>
+Espaços entre linhas e colunas, definidos com gap, row-gap e column-gap.</p><img src="../grid0/11.png" alt="">
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedades de container para Grids </title>
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            line-height: 1.6;
+            margin: 1rem;
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Propriedades de conteiner para Grid</h2>
+    <img src="../grid-2-propriedades/1.png" alt="">
+
+    <h2>Propriedade : display</h2>
+    <p>Para transformar um componente em Grid é só colocar a propriedade <b>Display: grid;</b> e ele automaticamente ira virar um grid conteiner e tudo que tiver dentro dele sera os grid itens, EX:</p>
+    <img src="../grid-2-propriedades/2.png" alt="">
+    <p>Porém com essa configuração (CSS) nada mudara pois por padrão ficara uma coluna com varias linhas</p>
+    <img src="../grid-2-propriedades/2.1.png" alt="">
+
+    <h2>Propriedade : Grid-template-columns</h2>
+    <p>Essa propriedade define o número das colunas, se apos o auto tivesse mais um auto seriam tres colunas.<p>
+    <img src="../grid-2-propriedades/3.png" alt="">
+    <img src="../grid-2-propriedades/3.1.png" alt="">
+
+    <h2>Propriedade: grid-template-rows</h2>
+    <p>Define o tamanho das linhas</p>
+    <img src="../grid-2-propriedades/4.png" alt="">
+    
+    <h2>Propriedade: grid-gap </h2>
+    <p>Define o espaço entre itens.</p>
+    <img src="../grid-2-propriedades/5.png" alt="">
+
+</body>
+
+</html>
