@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedades de container para Grids (parte 3)</title>
+    <style>
+    img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            line-height: 1.6;
+            margin: 1rem;
+            max-width: 100%;
+        }
+</style>
+</head>
+<body>
+    <h2>Propriedades de conteiner para Grid (Pt3): <br> Simplificadores (Shorthands)</h2>
+    <img src="../grid-2.3-propriedades-pt3/1.png" alt="">  <img src="../grid-2.3-propriedades-pt3/1.1.png" alt="">
+    
+    <h2>Grid-auto-row:</h2>
+<p>
+    Na imagaem abaixo foi criado apenas tres linhas e tres colunas a letra J foi criada depois e como nao tem espaço para ela ela fica dessa maneira pois se torna um item implicito e vai ficar do tamanho do conteudo e nao igual aos outros.
+    <br><br> <img src="../grid-2.3-propriedades-pt3/2.png" alt="">
+    <br>Para resolver isso usamos o <b>Grid-auto-row</b> para quando for adicionada uma nova linha ela ficar igual as demais :
+    <br><br> <img src="../grid-2.3-propriedades-pt3/3.png" alt="">
+</p>
+
+<h2>Grid-auto-colums:</h2>
+<p>
+    Seguindo a mesma linha de raciocinio so que agora de acordo com as colunas, se criar uma coluna nao explicitada ela ficara dessa forma .
+    <img src="../grid-2.3-propriedades-pt3/4.png" alt="">
+    <br> Se Voce quiser que caso seja criado uma quarta coluna ela fique do tamanho das demais utiliza o <b>Grid-auto-column </b>
+    <br><br> <img src="../grid-2.3-propriedades-pt3/5.png" alt="">
+</p>
+
+<h2>Place-items e Place-content</h2>
+<p>
+    Serve para simplificar o align e justify itens e p align e justify content:.
+   <br><br> <img src="../grid-2.3-propriedades-pt3/6.png" alt="">
+   <br> Valores simplificados em uma unica declaração :
+   <img src="../grid-2.3-propriedades-pt3/7.png" alt="">
+</p>
+
+<h2>Grid-template</h2>
+<p>
+    Serve para simplificar o Grid-template-columns e o rows, <b>obs:</b> na declaração o valor do rown vem primeiro no caso da imagem os 100px.
+   <br><br> <img src="../grid-2.3-propriedades-pt3/8.png" alt="">
+   <br> Valores simplificados em uma unica declaração :
+   <img src="../grid-2.3-propriedades-pt3/9.png" alt="">
+</p>
+
+<h2>Função repeat()</h2>
+<p> 
+    Usando o repeat você simplifica valores iguais como no exemplo abaixo:
+<br><br><img src="../grid-2.3-propriedades-pt3/repeat.png" alt="">
+<br><img src="../grid-2.3-propriedades-pt3/repeat2.png" alt="">
+<br>Função <b>Grid-template + Função repeat</b>:simplificando as funçoes grid em uma unica declaração e seus valores
+<br><img src="../grid-2.3-propriedades-pt3/repeat3.png" alt="">
+<br><img src="../grid-2.3-propriedades-pt3/repeat3.1.png" alt="">
+</p>
+ 
+    <h2>Função fraction</h2>
+<p>
+    A unidade <b>fr</b> significa fração do espaço disponível. Você usa fr para dividir o espaço restante entre colunas ou linhas de um grid
+<br><img src="../grid-2.3-propriedades-pt3/fraction.png" alt="">
+<br><img src="../grid-2.3-propriedades-pt3/fraction1.png" alt="">
+<br><img src="../grid-2.3-propriedades-pt3/fraction1.1.png" alt="">
+Como funciona:
+A área total disponível será dividida em 4 partes (1 + 2 + 1).
+<br>A primeira coluna(A) recebe 1 parte (25%)
+<br>A segunda coluna(B) recebe 2 partes (375 + 375 = 750px)(50%)
+<br>A terceira coluna(C) recebe 1 parte (25%)
+
+<h2>Exemplo usando varias formas de medidas:</h2>
+<img src="../grid-2.3-propriedades-pt3/fraction1.2.png" alt="">
+<h3>Como o fr se repete podemos usar a função repeat()</h3>
+<img src="../grid-2.3-propriedades-pt3/fraction2.png" alt="">
+</p>
+
+</body>
+</html>

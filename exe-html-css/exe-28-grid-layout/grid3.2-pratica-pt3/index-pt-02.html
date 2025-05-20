@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout na prática (parte 3)</title>
+    <style>
+    img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+      p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            line-height: 1.6;
+            margin: 1rem;
+            max-width: 100%;
+        }
+
+    div.container {
+            border: 3px solid blue; /* Borda azul de 3px ao redor do container */
+            display: grid; /* Ativa o layout de grid CSS */
+            grid-template-rows: repeat(3,80px); /* Cria 3 linhas de altura automática */
+            grid-template-columns: 1fr 3fr 1fr; 
+            grid-auto-flow: row;
+            grid-auto-rows: 80px;
+            grid-auto-columns: 120px;
+
+            gap: 10px; /* Espaçamento de 5px entre linhas e colunas do grid */
+            
+            /* align-items:(eixo vertical) e 
+            justify-items: (eixo horizontal) possuem as mesmas propriedades porem em eixos diferentes*/
+            /* align-items: start; */
+            /* justify-items: center;   */
+            place-items: normal normal ; /*Simplifica os dois items acima*/
+
+
+             /* align-content (eixo vertical) e justify-content (eixo horizontal) tem as mesmas propriedades porem atuam em eixos diferentes*/
+            /* align-content: space-between;
+            justify-content: end; */
+            place-content: normal normal;/*Simplifica os dois content acima*/
+        }
+
+    div.item {
+            border: 3px solid red; /* Borda vermelha de 3px ao redor de cada item */
+            padding: 5px; /* Espaçamento interno de 5px dentro de cada item */
+        }
+    
+
+</style>
+</head>
+<body>
+    <div class="container">  <!-- Se voce colocar div.container ja cria a div com a classe  -->
+        <div class="item">A</div> <!--ao lado foi criado Div.item*7 .serve para criar ja com class item e o * multiplica as linhas -->
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+    </div> <!--Função inspecionar do chome deixa mais facil de entender o grid -->
+
+
+
+
+
+</body>
+</html>
