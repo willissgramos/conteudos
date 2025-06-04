@@ -33,3 +33,15 @@
     top: 0px;
     background-color: rgb(20, 57, 220);
 }
+
+.imagem {
+    background: url("../logo2.png") no-repeat;
+    width: 200px;
+    height: 200px;
+    display: block;
+    background-size: contain;
+}
+
+.imagem:hover {
+    background-position: 50px;
+}

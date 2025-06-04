@@ -1,2 +1,7 @@
 @charset "UTF-8";
 
+.tema-escuro {
+  background-color: #222;
+  color: #f8f8f8;
+}
+
