@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Verificador de Voto</title>
+</head>
+<body>
+
+  <h2>Verifique se você pode votar</h2>
+
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" placeholder="Digite seu nome" /> <!-- Campo para o usuário digitar o nome -->
+  <br /><br />
+
+  <label for="idade">Idade:</label>
+  <input type="number" id="idade" placeholder="Digite sua idade" /> <!-- Campo para o usuário digitar a idade -->
+  <br /><br />
+
+  <button onclick="verificar()">Verificar</button> <!-- Botão que chama a função 'verificar' quando clicado -->
+
+  <p id="resultado"></p> <!-- Parágrafo onde o resultado aparecerá -->
+
+  <script>
+    const saudacao = (nome) => `Olá, ${nome}!`;                    // Função que recebe 'nome' e retorna uma saudação personalizada
+    const podeVotar = (idade) => idade >= 16 ? "Você pode votar." : "Você ainda não pode votar."; // Verifica se pode votar com base na idade
+
+    function verificar() {                                         // Função chamada ao clicar no botão
+      const nome = document.getElementById("nome").value;         // Pega o valor digitado no campo 'nome'
+      const idade = parseInt(document.getElementById("idade").value); // Pega o valor digitado no campo 'idade' e converte para número inteiro
+
+      const resultado = `${saudacao(nome)} ${podeVotar(idade)}`;  // Junta as mensagens das funções em uma só string
+      document.getElementById("resultado").textContent = resultado; // Exibe o resultado na tag com id 'resultado'
+    }
+  </script>
+</body>
+</html>
+
+
