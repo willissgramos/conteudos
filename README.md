@@ -1,6 +1,4 @@
 # conteudos
- <b>Projetos academicos</b>
-
 
 <b>Atividades:</b><br>
 
